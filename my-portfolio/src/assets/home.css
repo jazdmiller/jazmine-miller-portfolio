@@ -1,0 +1,13 @@
+*{
+    background: #F5F2ED;
+}
+
+.wrapper{
+    position: relative;
+    max-width: 90%;
+    border: 2px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 10%;
+}
