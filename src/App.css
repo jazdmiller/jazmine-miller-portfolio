@@ -4,12 +4,25 @@
   padding: 2rem;
   text-align: center;
 } */
+@font-face {
+  font-family: 'Zephyr';
+  src: url('../public/assets/fonts/zephyr-webfont.ttf');
+}
 
 body{
   margin: 0;
 }
 
 /* ******* NAVBAR ********** */
+
+.navbar{
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 2.5rem;
+}
 
 .home-page{
   background-color: #F5F2ED;
@@ -19,14 +32,46 @@ body{
 .nav-item.nav-link{
   color: #252525;
   font-family: 'Montserrat', sans-serif;
+ 
 }
 
 .nav-item.nav-link:hover{
   text-decoration: line-through;
   transition: text-decoration .3s ease;
+  
 }
 
 .navbar-collapse{
   border-bottom: 1px solid #252525;
 }
+
+.darkmode-icon{
+  width: 30px;
+}
 /* *******NAVBAR END ********** */
+
+
+/* ******* HOME PAGE ********** */
+
+.home-container{
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+}
+
+.home-text{
+  font-family: 'Zephyr', serif;
+  text-transform: uppercase;
+  font-size: 9em;
+}
+
+.developer-col{
+  margin-top: -5%;
+}
+
+.home-wrapper{
+  margin-left: 15%;
+}
+/* ******* HOME PAGE END ********** */
