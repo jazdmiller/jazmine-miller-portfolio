@@ -70,8 +70,9 @@ body{
 .home-text{
   font-family: 'Zephyr', serif;
   text-transform: uppercase;
-
 }
+
+
 
 .developer-col{
   margin-top: -5%;
@@ -123,13 +124,13 @@ body{
 
 @media (min-width: 500px){
   .home-text{
-    font-size: 5em;
+    font-size: 15vw;
   }
 }
 
 @media (min-width: 768px){
   .home-text{
-    font-size: 9em;
+    font-size: 9vw;
   }
   .home-wrapper{
     margin-left: 15%;
@@ -152,7 +153,6 @@ body{
 
       .cursor__ball {
          left: 0;
-        //  mix-blend-mode: difference;
          position: fixed;
          top: 0;
          z-index: 1000;
