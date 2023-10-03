@@ -1,6 +1,7 @@
 import React from 'react'
 import ArrowIcon from '../../public/assets/images/icons8-arrow-50.png'
 import { gsap } from 'gsap';
+import { motion } from 'framer-motion';
 
 function Home() {
     let cursor;
@@ -75,6 +76,28 @@ function onMouseHoverOut() {
    });
 }
 
+const containerTop ={
+    visible: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+            ease: [0.455, 0.03, 0.515, 0.955],
+            duration: 0.75 
+        }
+    },
+    hidden: {
+        opacity: 0,
+        y: 40,
+        x: -20,
+        transition: {
+            ease: [0.455, 0.03, 0.515, 0.955],
+            duration: 0.85
+        }
+
+    }
+}
+
   return (
     <div className='home-page'>
         <div class="cursor">
@@ -95,7 +118,7 @@ function onMouseHoverOut() {
 
             <div className='row frontend-row'>
                 <div className='col home-text text-left text-lg-right'>
-                frontend
+                <motion.div variants={containerTop} animate="visible" initial="hidden">frontend</motion.div>
                 </div>
             </div>
             <div className='row dev-row'>
