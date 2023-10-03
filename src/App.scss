@@ -28,7 +28,7 @@ body{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 2.5rem;
+  padding-right: 1.5rem;
 }
 
 .home-page{
@@ -59,7 +59,9 @@ body{
 
 
 /* ******* HOME PAGE ********** */
-
+.frontend-row{
+  margin-top: -10%;
+}
 .home-container{
   margin: 0;
   justify-content: center;
@@ -75,7 +77,7 @@ body{
 
 
 .developer-col{
-  margin-top: -5%;
+  margin-top: -8%;
 }
 
 
@@ -86,10 +88,11 @@ body{
 
 .name-text{
   font-weight: 700;
+
 }
 
 .btn-row{
-  width: 90%;
+  width: 100%;
 }
 .btn-col{
   font-family: 'Montserrat', sans-serif;
@@ -102,6 +105,11 @@ body{
 
 .cursor {
   display: none;
+}
+
+.home-wrapper{
+  margin-left: 127px;
+  margin-right: 190px;
 }
 /* ******* HOME PAGE END ********** */
 
@@ -120,21 +128,27 @@ body{
   .btn-col{
     margin-top: 20%;
   }
+
+  .dev-row{
+    width: 75%;
+  }
+
+
+  
 }
 
 @media (min-width: 500px){
   .home-text{
     font-size: 15vw;
   }
+
 }
 
 @media (min-width: 768px){
   .home-text{
-    font-size: 9vw;
+    font-size: 12vw;
   }
-  .home-wrapper{
-    margin-left: 15%;
-  }
+ 
   .home-container{
     min-height: 100vh;
   }
@@ -142,6 +156,14 @@ body{
   .btn-col{
     margin-top: 0;
   }
+
+  .dev-row{
+    width: 100%;
+  }
+
+  // .name-text{
+  //   margin-top: -10%;
+  // }
 
   html,
    body {
@@ -167,6 +189,39 @@ body{
       }
    }
 }
+
+@media (min-width: 768px) and (max-width: 1065px){
+  .name-text{
+    margin-top: 0;
+  }
+
+  .btn-col{
+    text-align: start;
+  }
+}
+
+@media (min-width: 1066px){
+  .name-text{
+    margin-top: -10%;
+  }
+
+  .btn-col{
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1060px){
+  .dev-row{
+    width: 110%;
+  }
+}
+@media (min-width: 1244px){
+ .home-text{
+  font-size: 140px ;
+ }
+}
+
 
 
 /* ******* MEDIA QUERIES END ********** */

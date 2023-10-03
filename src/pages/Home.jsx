@@ -91,14 +91,14 @@ function onMouseHoverOut() {
       </div>
    </div>
         <div className='home-container mx-auto'>
-            <div className='container home-wrapper'>
+            <div className='fluid-container home-wrapper'>
 
-            <div className='row'>
-                <div className='col home-text text-md-center'>
+            <div className='row frontend-row'>
+                <div className='col home-text text-left text-lg-right'>
                 frontend
                 </div>
             </div>
-            <div className='row'>
+            <div className='row dev-row'>
                 <div className='col home-text developer-col'>
                 developer
                 </div>
@@ -116,7 +116,7 @@ function onMouseHoverOut() {
                 </div>
             </div>
             <div className='row btn-row'>
-                <div className='col btn-col text-md-center'>
+                <div className='col btn-col'>
                 Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span>
                 </div>
             </div>
