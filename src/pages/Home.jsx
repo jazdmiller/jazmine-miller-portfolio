@@ -80,7 +80,7 @@ function onMouseHoverOut() {
         <div class="cursor">
       <div class="cursor__ball cursor__ball--big">
          <svg height="40" width="40">
-            <circle cx="20" cy="20" r="20" stroke-width="0"></circle>
+            <circle cx="20" cy="20" r="20" stroke-width="0" fill="#955F3D"></circle>
          </svg>
       </div>
 
