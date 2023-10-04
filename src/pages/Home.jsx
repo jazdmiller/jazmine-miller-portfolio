@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import ArrowIcon from '../../public/assets/images/icons8-arrow-50.png'
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 
 function Home() {
+// //ROTATING TEXT 
+// const circleRef = useRef(null)
+// const text ="Portfolio"
+// const characters = Array.from(text)
+
+// useEffect(() => {
+//     const circle = circleRef.current
+//     const deltaAngle = 360 / characters.length
+//     const distanceFromCenter = 50;
+
+//     characters.forEach((character, index) => {
+//         const span = document.createElement('span')
+//         span.innerText = character
+
+//         const rotateY = `rotateY(${index * deltaAngle}deg)`
+//         const translateZ = `translateZ(${distanceFromCenter}px)`
+//         span.style.transform = `${rotateY}${translateZ}`
+    
+//         circle.appendChild(span)
+// })
+
+// //SET THE SIZE OF CIRCLE 
+
+
+
+
+  
+// }, [characters])
+
+
+
     let cursor;
 let bigBall;
 let smallBall;
@@ -98,6 +129,8 @@ const containerTop ={
     }
 }
 
+
+
   return (
     <div className='home-page'>
         <div class="cursor">
@@ -118,7 +151,7 @@ const containerTop ={
 
             <div className='row frontend-row'>
                 <div className='col home-text text-left text-lg-right'>
-                <motion.div variants={containerTop} animate="visible" initial="hidden">frontend</motion.div>
+                <motion.div variants={containerTop} animate="visible" initial="hidden" >frontend</motion.div>
                 </div>
             </div>
             <div className='row dev-row'>
@@ -139,8 +172,10 @@ const containerTop ={
                 </div>
             </div>
             <div className='row btn-row'>
-                <div className='col btn-col'>
-                Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span>
+                <div className='col btn-col text-center mt-2'>
+                    <a href="#">Portfolio <span></span></a>
+                {/* Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span> */}
+                {/* <div class= 'ml-auto'id='circle' ref={circleRef}></div> */}
                 </div>
             </div>
             </div>
