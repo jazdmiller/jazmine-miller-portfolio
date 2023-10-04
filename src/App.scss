@@ -238,6 +238,9 @@ body{
   .home-text{
     font-size: 4em;
   }
+  .home-wrapper{
+    margin: 2%;
+  }
 
   .home-container{
     min-height: 100vh;
@@ -246,6 +249,7 @@ body{
 
   .btn-col{
     margin-top: 20%;
+    margin-left: auto;
   }
 
   .dev-row{
@@ -267,14 +271,17 @@ body{
   .home-text{
     font-size: 12vw;
   }
+
+  .home-wrapper{
+    margin-left: 127px;
+    margin-right: 190px;
+  }
  
   .home-container{
     min-height: 100vh;
   }
 
-  .btn-col{
-    margin-top: 0;
-  }
+  
 
   .dev-row{
     width: 100%;
@@ -333,6 +340,10 @@ body{
 @media (min-width: 1060px){
   .dev-row{
     width: 110%;
+  }
+
+  .btn-col{
+    margin-top: 0;
   }
 }
 @media (min-width: 1244px){

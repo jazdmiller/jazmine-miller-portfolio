@@ -172,7 +172,7 @@ const containerTop ={
                 </div>
             </div>
             <div className='row btn-row'>
-                <div className='col btn-col text-center mt-2'>
+                <div className='col btn-col '>
                     <a href="#">Portfolio <span></span></a>
                 {/* Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span> */}
                 {/* <div class= 'ml-auto'id='circle' ref={circleRef}></div> */}
