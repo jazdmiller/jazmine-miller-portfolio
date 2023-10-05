@@ -6,13 +6,15 @@
 } */
 
 :root {
-  --primary-light-color: #F5F2ED;
-  --light-mode-accent: #955F3D;
+  --primary-color: #F5F2ED;
+  --text-color: #252525;
+  --accent-color: #955F3D;
 }
 
 .dark-mode {
-  --primary-dark-color: #252525;
-  --dark-mode-accent: #B9FF66;
+  --primary-color: #252525;
+  --text-color: #F5F2ED;
+  --accent-color: #B9FF66;
 }
 
 @font-face {
@@ -22,9 +24,10 @@
 
 body{
   margin: 0;
-  background: #F5F2ED;
+  background: var(--primary-color);
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
+  overflow-x: hidden;
 }
 
 .row{
@@ -35,6 +38,7 @@ body{
 
 .navbar{
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -43,12 +47,12 @@ body{
 }
 
 .home-page{
-  background-color: #F5F2ED;
+  background-color: var(--primary-color);
   height: 100vh;
 }
 
 .nav-item.nav-link{
-  color: #252525;
+  color: var(--text-color);
   font-family: 'Montserrat', sans-serif;
  
 }
@@ -60,7 +64,7 @@ body{
 }
 
 .navbar-collapse{
-  border-bottom: 1px solid #252525;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .darkmode-icon{
@@ -111,7 +115,7 @@ body{
 
   a {
     position: relative;
-    color: #252525;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
@@ -125,7 +129,7 @@ body{
     position: absolute;
     height: 2px;
     top: 50%;
-    background: #252525;
+    background: var(--text-color);
     border-radius: 4px;
     transition: all 0.3s;
   }
@@ -164,7 +168,7 @@ body{
     height: 2px;
     top: 0;
     right: 0;
-    background: #252525;
+    background: var(--text-color);
     border-radius: 4px;
     transform: rotate(45deg);
     transition: all 0.15s;
@@ -233,7 +237,7 @@ body{
 }
 
 #circle:hover{
-  color: #955F3D;
+  color: var(--accent-color);
 }
 
 @keyframes rotate-animation {
@@ -242,6 +246,41 @@ body{
 }
 
 /* ******* HOME PAGE END ********** */
+
+
+/* ******* PROJECTS PAGE ********** */
+
+.projects-container{
+  margin-top: 10%;
+}
+
+.skills-col{
+  height: 80vh;
+}
+
+.skills-label img{
+  width: 40px;
+  
+}
+
+.skills-label {
+  font-size: 4em;
+  font-family: 'Zephyr', serif;
+  text-transform: uppercase;
+}
+
+.skill-list{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #ADA3A3;
+}
+
+.skill-list div:hover{
+  color: var(--text-color);
+  transition: color .3s ease-in-out;
+}
+/* ******* PROJECTS PAGE END ********** */
 
 /* ******* MEDIA QUERIES ********** */
 
@@ -318,11 +357,11 @@ body{
       }
 
       .cursor__ball--small circle {
-        fill: #252525;
+        fill: var(--text-color);
       }
 
       .cursor__ball--big circle {
-        fill: #955F3D;
+        fill: var(--accent-color);
       }
    }
 }
