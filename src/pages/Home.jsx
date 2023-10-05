@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import ArrowIcon from '../../public/assets/images/icons8-arrow-50.png'
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
+import AnimatedText from '../components/AnimatedText';
 
 function Home() {
 // //ROTATING TEXT 
@@ -107,28 +108,47 @@ function onMouseHoverOut() {
    });
 }
 
-const containerTop ={
-    visible: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        transition: {
-            ease: [0.455, 0.03, 0.515, 0.955],
-            duration: 0.75 
-        }
-    },
-    hidden: {
-        opacity: 0,
-        y: 40,
-        x: -20,
-        transition: {
-            ease: [0.455, 0.03, 0.515, 0.955],
-            duration: 0.85
-        }
 
-    }
+//Framer Motion text
+
+ const container = {
+   hidden: {opacity: 0},
+   visible: (i = 1) => ({
+       opacity: 1, 
+       transition: {staggerChildren: 0.12, delayChildren: 0.04 * i }
+   })
 }
 
+const containerDev = {
+   hidden: {opacity: 0},
+   visible: (i = 1) => ({
+       opacity: 1, 
+       transition: {staggerChildren: 0.12, delayChildren: 0.04 * i, delay: .4  }
+   })
+}
+
+const subText = {
+   hidden: {
+       opacity: 0,
+       y: -20,
+       transition: {
+           type: "spring",
+           damping: 20,
+           stiffness: 100
+       }
+   },
+
+   visible: {
+       opacity: 1,
+       y: 0,
+       transition: {
+           type: "spring",
+           damping: 20,
+           stiffness: 100,
+           delay: .6
+       }
+   }
+ }
 
 
   return (
@@ -151,14 +171,18 @@ const containerTop ={
 
             <div className='row frontend-row'>
                 <div className='col home-text text-left text-lg-right'>
-                <motion.div variants={containerTop} animate="visible" initial="hidden" >frontend</motion.div>
+                <motion.div variants={container} animate="visible" initial="hidden" >
+                  <AnimatedText text="Frontend" />
+                </motion.div>
                 </div>
             </div>
             <div className='row dev-row'>
                 <div className='col home-text developer-col'>
-                developer
+                  <motion.div variants={containerDev} animate="visible" initial="hidden">
+                     <AnimatedText text="Developer" />
+                  </motion.div>
                 </div>
-                <div className='col'>
+                <motion.div variants={subText} initial='hidden' animate='visible' className='col'>
                     <div className='row home-sub-text name-text'>
                     Jazmine Miller
                     </div>
@@ -169,7 +193,7 @@ const containerTop ={
                     Problem-Solver
                     </div>
                     
-                </div>
+                </motion.div>
             </div>
             <div className='row btn-row'>
                 <div className='col btn-col '>
