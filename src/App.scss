@@ -4,6 +4,17 @@
   padding: 2rem;
   text-align: center;
 } */
+
+:root {
+  --primary-light-color: #F5F2ED;
+  --light-mode-accent: #955F3D;
+}
+
+.dark-mode {
+  --primary-dark-color: #252525;
+  --dark-mode-accent: #B9FF66;
+}
+
 @font-face {
   font-family: 'Zephyr';
   src: url('../public/assets/fonts/zephyr-webfont.ttf');
