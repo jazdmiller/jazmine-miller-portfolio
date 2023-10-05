@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import ArrowIcon from '../../public/assets/images/icons8-arrow-50.png'
-import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import AnimatedText from '../components/AnimatedText';
 
@@ -35,78 +34,6 @@ function Home() {
 // }, [characters])
 
 
-
-    let cursor;
-let bigBall;
-let smallBall;
-
-let body;
-let widthMatches = false;
-
-window.addEventListener("load", () => {
-   cursor = document.querySelector(".cursor");
-   body = document.body;
-
-   bigBall = document.querySelector(".cursor__ball--big");
-   smallBall = document.querySelector(".cursor__ball--small");
-
-   // Listeners
-   var x = window.matchMedia("(min-width: 768px)");
-   togglePageCursor(x);
-   x.addListener(togglePageCursor);
-
-   body.addEventListener("mousemove", onMouseMove);
-   document.querySelectorAll(".hoverable").forEach((e) => {
-      e.addEventListener("mouseenter", onMouseHover);
-      e.addEventListener("mouseleave", onMouseHoverOut);
-   });
-});
-
-function togglePageCursor(e) {
-   if (e.matches) {
-      widthMatches = true;
-      body.style.cursor = "none";
-   } else {
-      widthMatches = false;
-      body.style.cursor = "";
-      cursor.style.display = "none";
-   }
-}
-
-// Move the cursor
-function onMouseMove(e) {
-   if (widthMatches) {
-      cursor.style.display = "block";
-   }
-
-   gsap.to(bigBall, {
-      x: e.pageX - 20,
-      y: e.pageY - 15,
-      duration: 0.8,
-      ease: "ease-in-out"
-   });
-
-   gsap.to(smallBall, {
-      x: e.pageX - 5,
-      y: e.pageY - 5,
-      duration: 0.3
-   });
-}
-
-// Hover an element
-function onMouseHover() {
-   gsap.to(bigBall, {
-      scale: 4,
-      duration: 0.3
-   });
-}
-
-function onMouseHoverOut() {
-   gsap.to(bigBall, {
-      scale: 1,
-      duration: 0.3
-   });
-}
 
 
 //Framer Motion text
@@ -146,6 +73,29 @@ const subText = {
            damping: 20,
            stiffness: 100,
            delay: .6
+       }
+   }
+ }
+
+ const portText = {
+   hidden: {
+       opacity: 0,
+       y: 0,
+       transition: {
+           type: "spring",
+           damping: 20,
+           stiffness: 100
+       }
+   },
+
+   visible: {
+       opacity: 1,
+       y: 0,
+       transition: {
+           type: "spring",
+           damping: 20,
+           stiffness: 100,
+           delay: .7
        }
    }
  }
@@ -197,7 +147,9 @@ const subText = {
             </div>
             <div className='row btn-row'>
                 <div className='col btn-col '>
+                  <motion.div variants={portText} initial="hidden" animate="visible">
                     <a href="#">Portfolio <span></span></a>
+                  </motion.div>
                 {/* Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span> */}
                 {/* <div class= 'ml-auto'id='circle' ref={circleRef}></div> */}
                 </div>
