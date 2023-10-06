@@ -256,6 +256,8 @@ body{
 
 .skills-col{
   height: 80vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .skills-label img{
@@ -273,12 +275,50 @@ body{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 1.3em;
+  text-align: start;
   color: #ADA3A3;
 }
+
+.skill-list-right div{
+ text-align: right;
+}
+
 
 .skill-list div:hover{
   color: var(--text-color);
   transition: color .3s ease-in-out;
+}
+
+.skill-list span{
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+
+
+.project-col {
+  text-align: start;
+  // padding-left: 10%;
+  overflow-wrap: break-word;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-title{
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 3em;
+  width: 75%;
+  transition: transform .2s ease-in-out;
+}
+
+.project-title:hover{
+  font-style: italic;
+  font-weight: 300;
+  transform: translateX(10px) ;
+}
+
+.project-subtext{
+  font-style: italic;
 }
 /* ******* PROJECTS PAGE END ********** */
 
