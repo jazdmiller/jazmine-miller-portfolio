@@ -1,6 +1,7 @@
 import './App.scss'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Project from './pages/Project';
 import Projects from './pages/Projects'
 import { gsap } from 'gsap';
 
@@ -96,8 +97,9 @@ function App() {
       </div>
    </div>
       <Navbar />
-      {/* <Home /> */}
-      <Projects />
+      {/* <Home />
+      <Projects /> */}
+      <Project />
     </>
   )
 }

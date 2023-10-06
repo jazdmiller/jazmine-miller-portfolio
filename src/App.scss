@@ -322,6 +322,35 @@ body{
 }
 /* ******* PROJECTS PAGE END ********** */
 
+/* ******* PROJECT PAGE ********** */
+
+.hero-container{
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.title-container{
+  height: 50%;
+  width: 50%;
+  background-color: var(--text-color);
+  border-radius: 30px;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  font-family: 'Zephyr';
+  text-transform: uppercase;
+  font-size: 4vw;
+}
+
+.title-container.expanded{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+/* ******* PROJECT PAGE END ********** */
+
 /* ******* MEDIA QUERIES ********** */
 
 @media (min-width: 375px){
