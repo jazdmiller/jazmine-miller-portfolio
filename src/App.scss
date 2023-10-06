@@ -346,7 +346,13 @@ body{
     width: 75%;
   }
 
+  .skills-col{
+    height: 40vh;
+   }
 
+   .project-col {
+    height: 40vh;
+   }
   
 }
 
@@ -404,6 +410,15 @@ body{
         fill: var(--accent-color);
       }
    }
+
+   .skills-col{
+    height: 80vh;
+   }
+
+   .project-col {
+    height: 80vh;
+   }
+  
 }
 
 @media (min-width: 768px) and (max-width: 1065px){
