@@ -1,5 +1,6 @@
 import './App.scss'
 import Navbar from './components/Navbar'
+import ScrollTriggerTest from './pages/Project';
 import Home from './pages/Home'
 import Project from './pages/Project';
 import Projects from './pages/Projects'
@@ -100,6 +101,7 @@ function App() {
       {/* <Home />
       <Projects /> */}
       <Project />
+      {/* <ScrollTriggerTest /> */}
     </>
   )
 }

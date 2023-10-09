@@ -1,56 +1,100 @@
-import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 
 function Project() {
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        gsap.set('.title-container', {width: '50%', height: '50%', xPercent: 0, yPercent: 0})
-    
-        gsap.from('.title-container', {
-            width: '50%',
-            height: '50%',
-            scrollTrigger: {
-                trigger: ".hero-container",
-                pin: true,
-                pinSpacing: false,
-                start: "top top",
-                end: () => "+=" + document.querySelector('.title-container').offsetHeight,
-                // end: "+=150%",
-                scrub: 1,
-                // markers: true,
-                onUpdate: (self) => {
-                    if (self.progress === 1) {
-                        document.querySelector('.title-container').classList.add('expanded')
-                    } else {
-                        document.querySelector('.title-container').classList.remove('expanded');
-                      }
-                }
-            }
-        })
+  const bgDivRef = useRef(null);
 
-        gsap.to('.title-container', {
-            width: '80%',
-      height: '80%',
-      scrollTrigger: {
-        trigger: ".hero-container",
-        start: "top center",
-        end: () => "+=" + document.querySelector('.title-container').offsetHeight,
-        end: "+=150%",
-        scrub: 1,
-        markers: true,
+  const throttle = (func, limit) => {
+    let inThrottle;
+    return function () {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
       }
-        })
-    }, [])
+    };
+  };
 
- 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const bgDiv = bgDivRef.current;
+
+    const handleScroll = throttle(() => {
+      const rect = bgDiv.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        gsap.to(bgDiv, {
+          width: '100%',
+          height: '100%',
+          duration: 1,
+          scrub: 2,
+         
+        });
+      }
+    }, 200);
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='container-fluid hero-container'>
-        <div className='title-container'>
-            <span>Shakn</span>
+    <div className='container '>
+      
+      <section className='outer-div mx-auto my-5'>
+        <div ref={bgDivRef} className='inner-div my-3 bg-div'>
+          Shakn
         </div>
+      </section>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
+      <div>
+        blah blah blah
+      </div>
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
