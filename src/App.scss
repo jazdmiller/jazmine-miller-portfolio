@@ -352,11 +352,20 @@ body{
 .inner-div{
   width: 50%;
   min-height: 50vh;
-  background-color: #252525;
-  color: #F5F2ED;
+  background-color: var(--text-color);
+  color: var(--primary-color);
   display: grid;
   place-items: center;
   border-radius: 30px;
+  font-family: 'Zephyr', serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.intro-text{
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform .3s, opacity .3s;
 }
 // .title-container.expanded{
 //   width: 100%;

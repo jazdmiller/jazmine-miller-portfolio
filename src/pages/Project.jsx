@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Project() {
   const bgDivRef = useRef(null);
+  const textRef = useRef(null);
 
   const throttle = (func, limit) => {
     let inThrottle;
@@ -23,6 +24,7 @@ function Project() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const bgDiv = bgDivRef.current;
+    const text = textRef.current;
 
     const handleScroll = throttle(() => {
       const rect = bgDiv.getBoundingClientRect();
@@ -31,13 +33,32 @@ function Project() {
           width: '100%',
           height: '100%',
           duration: 1,
-          scrub: 2,
-         
+          onComplete: () => {
+            gsap.from(text, {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              stagger: 0.2,
+              ease: 'power2.out' 
+            });
+          },
         });
       }
     }, 200);
 
-    window.addEventListener('scroll', handleScroll);
+    ScrollTrigger.create({
+      trigger: bgDiv,
+      start: 'top bottom',
+      end: 'bottom center',
+      onToggle: self => {
+        if (self.isActive) {
+          window.addEventListener('scroll', handleScroll);
+        } else {
+          window.removeEventListener('scroll', handleScroll);
+        }
+      },
+    });
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -51,48 +72,13 @@ function Project() {
           Shakn
         </div>
       </section>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
-      <div>
-        blah blah blah
-      </div>
+
+      <section>
+        <div ref={textRef} className='intro-text'>
+        Responsive cocktail recipe finder built with Reactjs, axios, HTML, CSS, Bootstrap, and Framer Motion. Deployed with Firebase.
+        </div>
+      </section>
+     
     </div>
   );
 }
