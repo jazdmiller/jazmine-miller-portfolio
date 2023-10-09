@@ -32,7 +32,7 @@ function Project() {
         gsap.to(bgDiv, {
           width: '100%',
           height: '100%',
-          duration: 1,
+          duration: .5,
           onComplete: () => {
             gsap.from(text, {
               y: 0,
@@ -74,7 +74,7 @@ function Project() {
       </section>
 
       <section>
-        <div ref={textRef} className='intro-text'>
+        <div ref={textRef} className='intro-text text-left'>
         Responsive cocktail recipe finder built with Reactjs, axios, HTML, CSS, Bootstrap, and Framer Motion. Deployed with Firebase.
         </div>
       </section>

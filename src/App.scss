@@ -365,7 +365,11 @@ body{
 .intro-text{
   opacity: 0;
   transform: translateY(-50px);
-  transition: transform .3s, opacity .3s;
+  transition: transform .2s, opacity .2s;
+
+  font-family: 'Zephyr', serif;
+  font-size: 2.5rem;
+  padding-left: 8%;
 }
 // .title-container.expanded{
 //   width: 100%;
