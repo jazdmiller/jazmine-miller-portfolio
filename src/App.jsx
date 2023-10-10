@@ -50,21 +50,24 @@ function App() {
   function onMouseMove(e) {
      if (widthMatches) {
         cursor.style.display = "block";
-     }
+        const mouseX = e.pageX - window.pageXOffset;
+    const mouseY = e.pageY - window.pageYOffset;
+     
   
      gsap.to(bigBall, {
-        x: e.pageX - 20,
-        y: e.pageY - 15,
+        x: mouseX - 20,
+        y: mouseY - 15,
         duration: 0.8,
         ease: "ease-in-out"
      });
   
      gsap.to(smallBall, {
-        x: e.pageX - 5,
-        y: e.pageY - 5,
+        x: mouseX - 5,
+        y: mouseY - 5,
         duration: 0.3
      });
   }
+}
   
   // Hover an element
   function onMouseHover() {

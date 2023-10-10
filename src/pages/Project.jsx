@@ -102,7 +102,7 @@ function Project() {
         </div>
       </section>
 
-      <section clas>
+      <section>
         <div className='row intro-row my-5'>
           <div className='col-12 col-md-4 px-0  my-3'>
             <div className='role-text'>Role</div>
@@ -117,6 +117,21 @@ Firebase, Javascript</div>
           <div className='col-12 col-md-4 px-0  my-3'>
           <div className='role-text'>URL</div>
             <div className='role-subtext'>Design & Development</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className='row my-5'>
+          <div className='col-12 col-md-6'>
+            <div className='bg-img'>
+
+            </div>
+          </div>
+          <div className='col-12 col-md-6'>
+          <div className='bg-img'>
+
+</div>
           </div>
         </div>
       </section>
