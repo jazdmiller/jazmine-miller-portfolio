@@ -124,14 +124,11 @@ Firebase, Javascript</div>
       <section>
         <div className='row my-5'>
           <div className='col-12 col-md-6'>
-            <div className='bg-img'>
-
+            <div className='bg-img bg-desktop'>
             </div>
           </div>
           <div className='col-12 col-md-6'>
-          <div className='bg-img'>
-
-</div>
+          <div className='bg-img bg-mobile'></div>
           </div>
         </div>
       </section>

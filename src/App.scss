@@ -402,9 +402,23 @@ body{
 }
 
 .bg-img{
-  height: 30vh;
+  height: 70vh;
   background-color: #505654;
   border-radius: 30px;
+}
+
+.bg-desktop{
+  background-image: url('/public/assets/images/desktop.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-mobile{
+  background-image: url('/public/assets/images/mobile.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 // .title-container.expanded{
 //   width: 100%;
