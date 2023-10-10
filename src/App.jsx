@@ -98,10 +98,9 @@ function App() {
       </div>
    </div>
       <Navbar />
-      {/* <Home />
-      <Projects /> */}
+      {/* <Home /> */}
+      {/* <Projects /> */}
       <Project />
-      {/* <ScrollTriggerTest /> */}
     </>
   )
 }

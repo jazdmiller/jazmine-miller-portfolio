@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import StarIcon from '/assets/images/star.svg'
 
 
 function Project() {
   const bgDivRef = useRef(null);
   const textRef = useRef(null);
+  const imgRef = useRef(null)
 
   const throttle = (func, limit) => {
     let inThrottle;
@@ -25,14 +26,18 @@ function Project() {
     gsap.registerPlugin(ScrollTrigger);
     const bgDiv = bgDivRef.current;
     const text = textRef.current;
+    const image = imgRef.current;
 
     const handleScroll = throttle(() => {
       const rect = bgDiv.getBoundingClientRect();
+      let mm = gsap.matchMedia();
+
       if (rect.top < window.innerHeight && rect.bottom > 0) {
         gsap.to(bgDiv, {
           width: '100%',
           height: '100%',
           duration: .5,
+        
           onComplete: () => {
             gsap.from(text, {
               y: 0,
@@ -43,6 +48,22 @@ function Project() {
             });
           },
         });
+
+        gsap.to(image, {
+          width: "50px",
+          height: "50px",
+        })
+
+        mm.add("(min-width: 390px)", () => {
+          gsap.to(bgDiv, {
+              fontSize: "4rem"
+          })
+          gsap.to(image, {
+            width: "30px",
+          height: "30px",
+          })
+
+        })
       }
     }, 200);
 
@@ -69,13 +90,28 @@ function Project() {
       
       <section className='outer-div mx-auto my-5'>
         <div ref={bgDivRef} className='inner-div my-3 bg-div'>
-          Shakn
+         <span>Shakn<img ref={imgRef} className='mt-3 ' src={StarIcon} /></span>
         </div>
       </section>
 
-      <section>
+      <section>      
+        <div className='row intro-row'>
         <div ref={textRef} className='intro-text text-left'>
         Responsive cocktail recipe finder built with Reactjs, axios, HTML, CSS, Bootstrap, and Framer Motion. Deployed with Firebase.
+        </div>
+        </div>
+      </section>
+
+      <section clas>
+        <div className='row'>
+          <div className='col'>
+            <div>
+              <span><img src={StarIcon} />Role</span>
+            </div>
+            <div>
+            Design & Deveelopment
+            </div>
+          </div>
         </div>
       </section>
      
