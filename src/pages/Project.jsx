@@ -103,14 +103,20 @@ function Project() {
       </section>
 
       <section clas>
-        <div className='row'>
-          <div className='col'>
-            <div>
-              <span><img src={StarIcon} />Role</span>
-            </div>
-            <div>
-            Design & Deveelopment
-            </div>
+        <div className='row intro-row my-5'>
+          <div className='col-12 col-md-4 px-0  my-3'>
+            <div className='role-text'>Role</div>
+            <div className='role-subtext'>Design & Development</div>
+          </div>
+          <div className='col-12 col-md-4 px-0 my-3'>
+          <div className='role-text'>Technologies</div>
+            <div className='role-subtext'>Reactjs, Bootstrap, Axios,
+HTML, CSS, Framer Motion,
+Firebase, Javascript</div>
+          </div>
+          <div className='col-12 col-md-4 px-0  my-3'>
+          <div className='role-text'>URL</div>
+            <div className='role-subtext'>Design & Development</div>
           </div>
         </div>
       </section>
