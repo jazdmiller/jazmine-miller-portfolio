@@ -402,7 +402,7 @@ body{
 }
 
 .bg-img{
-  height: 70vh;
+  height: 35vh;
   background-color: #505654;
   border-radius: 30px;
 }
@@ -419,6 +419,35 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.project-description{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.title-live-site{
+  font-family: 'Zephyr', serif;
+  font-size: 3rem;
+}
+
+.link-live-site{
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  border-radius: 15px;
+  text-decoration: underline;
+}
+
+.link-live-site:hover{
+  background-color: transparent;
+  border: solid 2px var(--text-color);
+  color:#252525;
+  transition: background-color .3s ease-in-out;
+}
+
+.link-border{
+  
 }
 // .title-container.expanded{
 //   width: 100%;
@@ -510,6 +539,10 @@ body{
   .inner-div{
     width: 50%;
     min-height: 50vh;
+  }
+
+  .bg-img{
+    height: 70vh;;
   }
 
  

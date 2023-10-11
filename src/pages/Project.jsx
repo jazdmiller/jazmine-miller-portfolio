@@ -123,7 +123,7 @@ Firebase, Javascript</div>
 
       <section>
         <div className='row my-5'>
-          <div className='col-12 col-md-6'>
+          <div className='col-12 col-md-6 mb-4 mb-md-0'>
             <div className='bg-img bg-desktop'>
             </div>
           </div>
@@ -131,6 +131,28 @@ Firebase, Javascript</div>
           <div className='bg-img bg-mobile'></div>
           </div>
         </div>
+      </section>
+
+      <section>
+
+        <div className='row intro-row project-description my-5'>
+          <div className='col-12 '>
+        Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
+          </div>
+          <div className='col-12 mt-3'>
+        Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
+          </div>
+        </div>
+
+        <div className='row intro-row my-5'>
+          <div className='col-12 text-center mb-4 title-live-site'>
+            Live Site
+          </div>
+          <div className='col text-center link-live-site py-3'>
+          <span className='link-border'>https://shakn-fbf84.web.app/</span>
+          </div>
+        </div>
+
       </section>
      
     </div>
