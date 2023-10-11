@@ -446,8 +446,10 @@ body{
   transition: background-color .3s ease-in-out;
 }
 
-.link-border{
-  
+.fade-in-section{
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform .2s, opacity .2s;
 }
 // .title-container.expanded{
 //   width: 100%;

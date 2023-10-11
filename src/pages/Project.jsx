@@ -49,9 +49,26 @@ function Project() {
           },
         });
 
+        gsap.from(text, {
+          scrollTrigger: text,
+          y: 0,
+          opacity: 1,
+          duration: .3,
+          stagger: 0.2,
+          ease: 'power2.out'
+        })
         gsap.to(image, {
           width: "50px",
           height: "50px",
+        })
+        
+        gsap.to('.fade-in-section', {
+          scrollTrigger: '.fade-in-section',
+          y: 0,
+          opacity: 1,
+          duration: .3,
+          stagger: 0.2,
+          ease: 'power2.out'
         })
 
         mm.add("(min-width: 390px)", () => {
@@ -66,6 +83,18 @@ function Project() {
         })
       }
     }, 200);
+
+    const sections = gsap.utils.toArray('.fade-in-section')
+
+    sections.forEach((section, i) => {
+      const anim = gsap.fromTo(section, {autoAlpha: 0, y: -50}, {duration: .5, autoAlpha: 1, y: 0} )
+      ScrollTrigger.create({
+        trigger: section,
+        animation: anim,
+        toggleActions: "play none none none",
+        once: true,
+      })
+    })
 
     ScrollTrigger.create({
       trigger: bgDiv,
@@ -102,8 +131,8 @@ function Project() {
         </div>
       </section>
 
-      <section>
-        <div className='row intro-row my-5'>
+      <section className=''>
+        <div className='fade-in-section row intro-row my-5'>
           <div className='col-12 col-md-4 px-0  my-3'>
             <div className='role-text'>Role</div>
             <div className='role-subtext'>Design & Development</div>
@@ -122,7 +151,7 @@ Firebase, Javascript</div>
       </section>
 
       <section>
-        <div className='row my-5'>
+        <div className='fade-in-section row my-5'>
           <div className='col-12 col-md-6 mb-4 mb-md-0'>
             <div className='bg-img bg-desktop'>
             </div>
@@ -135,7 +164,7 @@ Firebase, Javascript</div>
 
       <section>
 
-        <div className='row intro-row project-description my-5'>
+        <div className='row fade-in-sectionintro-row project-description my-5'>
           <div className='col-12 '>
         Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
           </div>
