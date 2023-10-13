@@ -9,6 +9,7 @@ function Project() {
   const textRef = useRef(null);
   const imgRef = useRef(null)
 
+
   const throttle = (func, limit) => {
     let inThrottle;
     return function () {
@@ -27,6 +28,7 @@ function Project() {
     const bgDiv = bgDivRef.current;
     const text = textRef.current;
     const image = imgRef.current;
+  
 
     const handleScroll = throttle(() => {
       const rect = bgDiv.getBoundingClientRect();
@@ -84,6 +86,9 @@ function Project() {
       }
     }, 200);
 
+  
+
+
     const sections = gsap.utils.toArray('.fade-in-section')
 
     sections.forEach((section, i) => {
@@ -115,8 +120,8 @@ function Project() {
   }, []);
 
   return (
-    <div className='container '>
-      
+    <div className='container' id='smooth-wrapper'>
+      <div id='smooth-content'>
       <section className='outer-div mx-auto my-5'>
         <div ref={bgDivRef} className='inner-div my-3 bg-div'>
          <span>Shakn<img ref={imgRef} className='mt-3 ' src={StarIcon} /></span>
@@ -164,26 +169,26 @@ Firebase, Javascript</div>
 
       <section>
 
-        <div className='row fade-in-sectionintro-row project-description my-5'>
+        <div className='row fade-in-section intro-row project-description my-5'>
           <div className='col-12 '>
         Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
           </div>
-          <div className='col-12 mt-3'>
+          <div className=' fade-in-section col-12 mt-3'>
         Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
           </div>
         </div>
 
-        <div className='row intro-row my-5'>
-          <div className='col-12 text-center mb-4 title-live-site'>
+        <div className='row  intro-row my-5'>
+          <div className='col-12 fade-in-section text-center mb-4 title-live-site'>
             Live Site
           </div>
-          <div className='col text-center link-live-site py-3'>
+          <div className='col fade-in-section text-center link-live-site py-3'>
           <span className='link-border'>https://shakn-fbf84.web.app/</span>
           </div>
         </div>
 
       </section>
-     
+      </div>
     </div>
   );
 }
