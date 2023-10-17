@@ -509,14 +509,25 @@ body {
 .skill{
   text-transform: uppercase;
   border: 1px solid var(--text-color);
-  border-radius: 10px;
-  color: var(--text-color)
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
 }
 
 .skill:hover{
   background-color: var(--text-color);
   color: var(--primary-color);
   transition: .3s background-color ease-in-out;
+}
+
+.contact-row{
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.contact-row img{
+  width: 40px;
 }
 /* ******* ABOUT PAGE END ********** */
 

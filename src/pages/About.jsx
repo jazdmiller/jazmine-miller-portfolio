@@ -1,9 +1,23 @@
 import React from "react";
 import Img from "/assets/images/about-photo.svg";
-import StarIcon from "/assets/images/star.svg"
+import StarIcon from "/assets/images/star.svg";
 
 function About() {
-  const skills = ["Reactjs", "Javascript", "HTML/CSS", "Bootstrap", "SASS", "Matrial UI", "Git", "Jenkins", "Nodejs", "Express", "Firebase", "Figma", "Adobe", ]
+  const skills = [
+    "Reactjs",
+    "Javascript",
+    "HTML/CSS",
+    "Bootstrap",
+    "SASS",
+    "Matrial UI",
+    "Git",
+    "Jenkins",
+    "Nodejs",
+    "Express",
+    "Firebase",
+    "Figma",
+    "Adobe",
+  ];
   return (
     <div className="container ">
       <section className="about-hero-section">
@@ -41,7 +55,7 @@ function About() {
               <p>
                 I've been on this exciting journey for 3+ years and have
                 equipped myself with a diverse toolbox that includes React,
-                JavaScript, HTML, CSS, and Bootstrap, among various other
+                JavaScript, HTML/CSS, and Bootstrap, among various other
                 frontend frameworks/libraries. With a background in digital
                 marketing, I bring a unique perspective to my work,
                 understanding the delicate balance between aesthetics and
@@ -65,13 +79,26 @@ function About() {
                 to implement innovative solutions tailored to unique needs.
               </p> */}
 
-              <span><img src={StarIcon} /></span><h2 className="about-skills">Skills</h2>
+              <h2 className="about-skills">Skills</h2>
               <div className="row my-3">
+                {skills.map((skill) => {
+                  return (
+                    <p className="col-2 pl-0 text-center skill mr-3">{skill}</p>
+                  );
+                })}
+              </div>
 
-              {skills.map(skill => {
-            
-               return <p className="col-2 pl-0 text-center skill mr-3">{skill}</p>
-              })}
+              <div className="my-5 row contact-row">
+                <div className="col pl-0">
+                  <span>
+                    <img src={StarIcon} />
+                    Contact Me
+                  </span> <br/>
+                  <span>
+                    <img src={StarIcon} />
+                    Portfolio
+                  </span>
+                </div>
               </div>
             </div>
           </div>
