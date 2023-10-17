@@ -491,12 +491,13 @@ body {
 }
 
 .about-text-wrapper{
-  width: 80%;
+  width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
   line-height: 2.3;
   display: grid;
   place-items: center;
+  margin-top: 10%;
 }
 
 .about-skills{
@@ -643,6 +644,11 @@ body {
     width: 100%;
     // border: 2px solid blue;
     
+  }
+
+  .about-text-wrapper{
+    width: 80%;
+    margin-top: 0;
   }
 
  

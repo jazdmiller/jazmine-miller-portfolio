@@ -83,7 +83,9 @@ function About() {
               <div className="row my-3">
                 {skills.map((skill) => {
                   return (
-                    <p className="col-2 pl-0 text-center skill mr-3">{skill}</p>
+                    <div className="col-4 col-sm-3 col-md-3 col-lg-2 p-0 text-center mr-3">
+                      <p className=" skill ">{skill}</p>
+                    </div>
                   );
                 })}
               </div>
