@@ -1,8 +1,9 @@
 import React from "react";
 import Img from "/assets/images/about-photo.svg";
+import StarIcon from "/assets/images/star.svg"
 
 function About() {
-  const skills = ["Reactjs", "Javascript", "HTML/CSS", "Bootstrap", "SASS", "Matrial UI", "Git", "Nodejs", "Express", "Firebase", "Figma", "Adobe", ]
+  const skills = ["Reactjs", "Javascript", "HTML/CSS", "Bootstrap", "SASS", "Matrial UI", "Git", "Jenkins", "Nodejs", "Express", "Firebase", "Figma", "Adobe", ]
   return (
     <div className="container ">
       <section className="about-hero-section">
@@ -64,7 +65,7 @@ function About() {
                 to implement innovative solutions tailored to unique needs.
               </p> */}
 
-              <h2 className="about-skills">Skills</h2>
+              <span><img src={StarIcon} /></span><h2 className="about-skills">Skills</h2>
               <div className="row my-3">
 
               {skills.map(skill => {

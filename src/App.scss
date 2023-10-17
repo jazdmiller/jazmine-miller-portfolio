@@ -719,6 +719,22 @@ body {
   .home-text {
     font-size: 140px;
   }
+
+  .img-container img {
+    max-height: 450px;
+  }
+
+  .about-hero-section{
+    max-width: 1110px ;
+  }
+
+  .text-hello h1{
+    font-size: 150px;
+  }
+  
+  .text-hello h2{
+    font-size: 40px;
+  }
 }
 
 /* ******* MEDIA QUERIES END ********** */
