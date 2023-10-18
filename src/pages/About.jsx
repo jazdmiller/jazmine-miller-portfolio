@@ -1,8 +1,9 @@
 import React from "react";
 import Img from "/assets/images/about-photo.svg";
 import StarIcon from "/assets/images/star.svg";
+import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
 
-function About() {
+function About({ isDarkMode }) {
   const skills = [
     "Reactjs",
     "Javascript",
@@ -42,15 +43,7 @@ function About() {
         <div className="about-text-wrapper">
           <div className="row w-100 w-md-75">
             <div className="col-12">
-              {/* <p>
-                My passion lies in crafting digital experiences that feel
-                seamless and inclusive. There's something thrilling about
-                translating abstract ideas into tangible interfaces that users
-                can interact with and find joy in. My approach is defined by
-                continuous iteration - a process where ideas evolve and designs
-                refine until they meet the highest standards of usability and
-                aesthetics.
-              </p> */}
+  
               <p>
                 I've been on this exciting journey for 3+ years and have
                 equipped myself with a diverse toolbox that includes React,
@@ -92,11 +85,11 @@ function About() {
               <div className="my-5 row contact-row">
                 <div className="col pl-0">
                   <span>
-                    <img src={StarIcon} />
+                    <img src={ isDarkMode ? DarkStarIcon : StarIcon} />
                     Contact Me
                   </span> <br/>
                   <span>
-                    <img src={StarIcon} />
+                    <img src={isDarkMode ? DarkStarIcon : StarIcon} />
                     Portfolio
                   </span>
                 </div>

@@ -474,10 +474,12 @@ body {
 .text-hello h2{
   font-family: 'Zephyr', serif;
   font-size: 2.5em;
+  color: var(--text-color);
 }
 
 .about-text {
   position: absolute;
+  color: var(--text-color);
 }
 
 .about-hero-text {
@@ -491,6 +493,7 @@ body {
 .about-text-section{
  display: grid;
  place-items: center;
+ color: var(--text-color);
 }
 
 .about-text-wrapper{
@@ -570,6 +573,7 @@ body {
   margin-top: 10%;
   font-family: 'Montserrat', sans-serif;
   text-decoration: underline;
+  color: var(--text-color);
 }
 
 .email-row img{
