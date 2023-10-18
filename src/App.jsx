@@ -89,7 +89,7 @@ function App() {
   
 
   return (
-    <>
+    <div className=''>
 
     {/* CUSTOM CURSOR */}
             <div class="cursor">
@@ -120,7 +120,7 @@ function App() {
       
       
    
-    </>
+    </div>
   )
 }
 

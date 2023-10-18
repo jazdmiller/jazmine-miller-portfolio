@@ -26,7 +26,6 @@ body {
   margin: 0;
   background: var(--primary-color);
   width: 100vw;
-  // height: 100vh;
   overflow-x: hidden;
 }
 
@@ -68,13 +67,13 @@ body {
 .darkmode-icon {
   width: 30px;
 }
+
 /* *******NAVBAR END ********** */
 
 /* ******* HOME PAGE ********** */
-.frontend-row {
-}
+
 .home-container {
-  margin: 0;
+  margin: -5%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -83,6 +82,7 @@ body {
 .home-text {
   font-family: "Zephyr", serif;
   text-transform: uppercase;
+  color: var(--text-color);
 }
 
 .developer-col {
@@ -91,6 +91,7 @@ body {
 
 .home-sub-text {
   font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
 }
 
 .name-text {

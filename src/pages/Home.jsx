@@ -4,39 +4,6 @@ import { motion } from 'framer-motion';
 import AnimatedText from '../components/AnimatedText';
 
 function Home() {
-// //ROTATING TEXT 
-// const circleRef = useRef(null)
-// const text ="Portfolio"
-// const characters = Array.from(text)
-
-// useEffect(() => {
-//     const circle = circleRef.current
-//     const deltaAngle = 360 / characters.length
-//     const distanceFromCenter = 50;
-
-//     characters.forEach((character, index) => {
-//         const span = document.createElement('span')
-//         span.innerText = character
-
-//         const rotateY = `rotateY(${index * deltaAngle}deg)`
-//         const translateZ = `translateZ(${distanceFromCenter}px)`
-//         span.style.transform = `${rotateY}${translateZ}`
-    
-//         circle.appendChild(span)
-// })
-
-// //SET THE SIZE OF CIRCLE 
-
-
-
-
-  
-// }, [characters])
-
-
-
-
-//Framer Motion text
 
  const container = {
    hidden: {opacity: 0},
@@ -103,19 +70,7 @@ const subText = {
 
   return (
     <div className='home-page'>
-        <div class="cursor">
-      <div class="cursor__ball cursor__ball--big">
-         <svg height="40" width="40">
-            <circle cx="20" cy="20" r="20" stroke-width="0" fill="#955F3D"></circle>
-         </svg>
-      </div>
 
-      <div class="cursor__ball cursor__ball--small">
-         <svg height="10" width="10">
-            <circle cx="5" cy="5" r="5" stroke-width="0"></circle>
-         </svg>
-      </div>
-   </div>
         <div className='home-container mx-auto'>
             <div className='fluid-container home-wrapper'>
 
