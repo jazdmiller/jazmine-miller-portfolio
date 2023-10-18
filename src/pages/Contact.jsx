@@ -14,7 +14,7 @@ function Contact() {
 
       <section className='email-row'>
         <div className='row'>
-          <p>Email: jazminedmiller@gmail.com</p>
+         <p>Email: jazminedmiller@gmail.com</p>
         </div>
         <div className='row'>
         <p>Socials: <a>LinkedIn /</a><a> Github</a></p>

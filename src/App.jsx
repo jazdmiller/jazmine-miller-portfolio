@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import { gsap } from 'gsap';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
 
 
 function App() {
@@ -89,6 +90,8 @@ function App() {
 
   return (
     <>
+
+    {/* CUSTOM CURSOR */}
             <div class="cursor">
       <div class="cursor__ball cursor__ball--big">
          <svg height="40" width="40">
@@ -102,12 +105,21 @@ function App() {
          </svg>
       </div>
    </div>
-      <Navbar />
-      {/* <Home /> */}
-      {/* <Projects /> */}
-      {/* <Project /> */}
-      {/* <About /> */}
-      <Contact />
+
+   
+   <Router>
+   <Navbar />
+      <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/projects" element={<Projects />} />
+         <Route path="/projects/:id" element={<Project />} />
+         <Route path="/about" element={<About />} />
+         <Route path="/contact" element={<Contact />} />
+      </Routes>
+   </Router>
+      
+      
+   
     </>
   )
 }

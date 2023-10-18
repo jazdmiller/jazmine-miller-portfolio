@@ -1,5 +1,6 @@
 import React from 'react'
 import SunIcon from '../../public/assets/images/icons8-sun.svg'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -9,10 +10,10 @@ function Navbar() {
   </button>
   <div class="collapse navbar-collapse py-2 justify-content-between" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-3">
-      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Projects</a>
-      <a class="nav-item nav-link" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <Link class="nav-item nav-link" to="/">Home</Link>
+      <Link class="nav-item nav-link" to="/projects">Projects</Link>
+      <Link class="nav-item nav-link" to="/about">About</Link>
+      <Link class="nav-item nav-link" to="/contact">Contact</Link>
     </div>
     <img  className='darkmode-icon mr-4' src={SunIcon}/>
   </div>
