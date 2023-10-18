@@ -546,6 +546,15 @@ body {
 .contact-row img{
   width: 40px;
 }
+
+.about-stagger{
+  opacity: 0;
+  transform:translateY(-20px);
+}
+
+.img-fade{
+  opacity: 0;
+}
 /* ******* ABOUT PAGE END ********** */
 
 

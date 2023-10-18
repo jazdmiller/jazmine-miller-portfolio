@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Img from "/assets/images/about-photo.svg";
 import StarIcon from "/assets/images/star.svg";
 import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
+import { gsap } from 'gsap'
 
 function About({ isDarkMode }) {
+
+  useEffect(() => {
+    gsap.to('.about-stagger', {
+      opacity: 1,
+      y: 0,
+      duration: .6,
+      stagger: .2,
+      ease: "power2.inOut"
+    })
+
+    gsap.to('.img-fade', {
+      opacity: 1,
+      duration: .6,
+      ease: "power2.inOut"
+    })
+  }, [])
   const skills = [
     "Reactjs",
     "Javascript",
@@ -25,12 +42,12 @@ function About({ isDarkMode }) {
         <div className="hero-wrapper">
           <div className="row">
             <div className="col text-center text-md-left text-hello col-md-7">
-              <h1>Hello,</h1>
-              <h2 className="mb-4">
+              <h1 className="about-stagger">Hello,</h1>
+              <h2 className=" about-stagger mb-4">
                 I'm Jazmine. A front-end developer and creative thinker.
               </h2>
             </div>
-            <div className=" col-12 text-center mb-md-0 col-md-5">
+            <div className=" col-12 img-fade text-center mb-md-0 col-md-5">
               <div className="img-container">
                 <img src={Img} />
               </div>
@@ -39,12 +56,12 @@ function About({ isDarkMode }) {
         </div>
       </section>
 
-      <section className="about-text-section my-5 my-md-0">
+      <section className="about-text-section  my-5 my-md-0">
         <div className="about-text-wrapper">
           <div className="row w-100 w-md-75">
-            <div className="col-12">
+            <div className="col-12 ">
   
-              <p>
+              <p className="about-stagger">
                 I've been on this exciting journey for 3+ years and have
                 equipped myself with a diverse toolbox that includes React,
                 JavaScript, HTML/CSS, and Bootstrap, among various other
@@ -56,7 +73,7 @@ function About({ isDarkMode }) {
                 needs!
               </p>
 
-              <p>
+              <p className="about-stagger">
                 I'm a firm believer in collaboration and am excited at the
                 prospect of joining a team dedicated to creativity and bringing
                 projects to life. Free to reach out!
