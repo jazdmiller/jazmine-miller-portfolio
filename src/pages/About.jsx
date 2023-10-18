@@ -26,8 +26,7 @@ function About() {
             <div className="col text-center text-md-left text-hello col-md-7">
               <h1>Hello,</h1>
               <h2 className="mb-4">
-                I'm Jazmine. A front-end developer, creative thinker, and
-                advocate for exceptional user experiences.
+                I'm Jazmine. A front-end developer and creative thinker.
               </h2>
             </div>
             <div className=" col-12 text-center mb-md-0 col-md-5">

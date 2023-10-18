@@ -3,7 +3,7 @@ import SunIcon from '../../public/assets/images/icons8-sun.svg'
 
 function Navbar() {
   return (
-    <nav className='navbar navbar-expand-lg py-0'>
+    <nav className='navbar container navbar-expand-lg py-0 px-0'>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

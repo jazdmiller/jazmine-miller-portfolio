@@ -497,7 +497,7 @@ body {
   line-height: 2.3;
   display: grid;
   place-items: center;
-  margin-top: 10%;
+  
 }
 
 .about-skills{
@@ -531,6 +531,47 @@ body {
   width: 40px;
 }
 /* ******* ABOUT PAGE END ********** */
+
+
+/* ******* CONTACT PAGE ********** */
+
+.contact-title{
+  margin-top: 5%;
+}
+
+.contact-title h1{
+  color: var(--text-color);
+  font-family: 'Zephyr', serif;
+  text-transform: uppercase;
+  font-size: 12vw;
+}
+
+.contact-title h2{
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  width: 90%;
+  margin-top: -2%;
+}
+
+.contact-title img{
+  width: 30px;
+  height: 30px;
+}
+
+.contact-container{
+  margin-top: 20%;
+}
+
+.email-row{
+  margin-top: 10%;
+  font-family: 'Montserrat', sans-serif;
+}
+/* ******* CONTACT PAGE END ********** */
+
+
+
+
 
 /* ******* MEDIA QUERIES ********** */
 
@@ -594,6 +635,25 @@ body {
   .about-hero-text {
     font-family: "Zephyr", serif;
     font-size: 2rem;
+  }
+
+  .contact-title h1{
+    color: var(--text-color);
+    font-family: 'Zephyr', serif;
+    text-transform: uppercase;
+    font-size: 10vw;
+  }
+
+  .contact-title h2{
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    width: 70%;
+    margin-top: -2%;
+  }
+
+  .contact-container{
+    margin-top:0%;
   }
 
   

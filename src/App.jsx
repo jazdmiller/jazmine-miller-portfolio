@@ -6,6 +6,7 @@ import Project from './pages/Project';
 import Projects from './pages/Projects'
 import { gsap } from 'gsap';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -105,7 +106,8 @@ function App() {
       {/* <Home /> */}
       {/* <Projects /> */}
       {/* <Project /> */}
-      <About />
+      {/* <About /> */}
+      <Contact />
     </>
   )
 }
