@@ -245,12 +245,15 @@ body {
 
 .projects-container {
   margin-top: 20%;
+  // opacity: 0;
+  // transform: translateY(20px);
 }
 
 .skills-col {
   height: 80vh;
   overflow: hidden;
   position: relative;
+  opacity: 0;
 }
 
 .skills-label img {
@@ -292,6 +295,8 @@ body {
   overflow-wrap: break-word;
   font-family: "Montserrat", sans-serif;
   color: var(--text-color);
+ 
+
 }
 
 .project-title {
@@ -310,6 +315,11 @@ body {
 
 .project-subtext {
   font-style: italic;
+}
+
+.project-list{
+  opacity: 0;
+  transform: translateY(-20px);
 }
 /* ******* PROJECTS PAGE END ********** */
 

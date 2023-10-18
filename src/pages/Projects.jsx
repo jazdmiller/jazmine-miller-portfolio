@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SkillsIcon from "../../public/assets/images/star.svg";
 import DarkSkillsIcon from "../../public/assets/images/star-darkmode.svg";
+import { gsap } from 'gsap'
 
 function Projects({ isDarkMode }) {
+
+  const projectsRef = useRef(null)
+
+  useEffect(() => {
+    // const projects = projectsRef.current.children;
+
+    gsap.to('.project-list', {
+      opacity: 1,
+      y: 0,
+      duration: .6,
+      stagger: .2,
+      ease: "power2.inOut",
+    })
+
+    gsap.to('.project-fade', {
+      opacity: 1,
+      duration: .6,
+      ease: "power2.inOut"
+    })
+  }, [])
+
   return (
     <div className="container">
     <div className="container-fluid text-center projects-container mx-md-5">
       <div className="row mr-0">
-        <div className="col-12 col-md-6 skills-col d-flex flex-column ">
+        <div className="col-12 col-md-6 skills-col d-flex flex-column project-fade ">
           <div className=" row justify-content-start mr-0">
             <span className="skills-label">
               <img className="mr-1" src={isDarkMode ? DarkSkillsIcon : SkillsIcon} />
@@ -21,20 +43,20 @@ function Projects({ isDarkMode }) {
          
         </div>
 
-        <div className="col col-md-6 mr-auto project-col">
-          <div>
+        <div className="col col-md-6 mr-auto project-col" >
+          <div className="project-list">
             <div className="project-title">Shakn</div>
             <div className="project-subtext">Design & Development</div>
           </div>
-          <div className=" pt-4">
+          <div className="project-list pt-4">
             <div className="project-title">Workit Landing Page</div>
             <div className="col project-subtext">Development</div>
           </div>
-          <div className="pt-4">
+          <div className="project-list pt-4">
             <div className="project-title">Shakn</div>
             <div className="project-subtext">Design & Development</div>
           </div>
-          <div className=" pt-4">
+          <div className=" project-list pt-4">
             <div className="project-title">Shakn</div>
             <div className="project-subtext">Design & Development</div>
           </div>
