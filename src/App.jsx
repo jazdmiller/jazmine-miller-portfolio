@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import './App.scss'
 import Navbar from './components/Navbar'
 import ScrollTriggerTest from './pages/Project';
@@ -11,6 +12,8 @@ import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-
 
 
 function App() {
+
+   const [isDarkMode, setIsDarkMode] = useState(true)
 
   let cursor;
   let bigBall;
@@ -89,7 +92,7 @@ function App() {
   
 
   return (
-    <div className='dark-mode'>
+    <div className={isDarkMode ?'dark-mode' : ''}>
 
     {/* CUSTOM CURSOR */}
             <div class="cursor">
@@ -108,7 +111,7 @@ function App() {
 
    
    <Router>
-   <Navbar />
+   <Navbar isDarkMode={isDarkMode}/>
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/projects" element={<Projects />} />
