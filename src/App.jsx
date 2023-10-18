@@ -122,7 +122,7 @@ function App() {
    <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       <Routes>
          <Route path="/" element={<Home />} />
-         <Route path="/projects" element={<Projects />} />
+         <Route path="/projects" element={<Projects isDarkMode={isDarkMode}/>} />
          <Route path="/projects/:id" element={<Project />} />
          <Route path="/about" element={<About />} />
          <Route path="/contact" element={<Contact />} />

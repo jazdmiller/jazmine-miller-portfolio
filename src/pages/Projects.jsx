@@ -1,7 +1,8 @@
 import React from "react";
 import SkillsIcon from "../../public/assets/images/star.svg";
+import DarkSkillsIcon from "../../public/assets/images/star-darkmode.svg";
 
-function Projects() {
+function Projects({ isDarkMode }) {
   return (
     <div className="container">
     <div className="container-fluid text-center projects-container mx-md-5">
@@ -9,7 +10,7 @@ function Projects() {
         <div className="col-12 col-md-6 skills-col d-flex flex-column ">
           <div className=" row justify-content-start mr-0">
             <span className="skills-label">
-              <img className="mr-1" src={SkillsIcon} />
+              <img className="mr-1" src={isDarkMode ? DarkSkillsIcon : SkillsIcon} />
               Projects
             </span>
           </div>
