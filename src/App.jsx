@@ -89,7 +89,7 @@ function App() {
   
 
   return (
-    <div className=''>
+    <div className='dark-mode'>
 
     {/* CUSTOM CURSOR */}
             <div class="cursor">
