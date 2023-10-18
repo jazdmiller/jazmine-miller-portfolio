@@ -13,7 +13,15 @@ import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-
 
 function App() {
 
-   const [isDarkMode, setIsDarkMode] = useState(true)
+
+   // DARK MODE //
+   const [isDarkMode, setIsDarkMode] = useState(false)
+
+   const toggleDarkMode = () => {
+      setIsDarkMode(!isDarkMode)
+      // Toggle the 'dark-mode' class on the body element
+      document.body.classList.toggle('dark-mode')
+   }
 
   let cursor;
   let bigBall;
@@ -111,7 +119,7 @@ function App() {
 
    
    <Router>
-   <Navbar isDarkMode={isDarkMode}/>
+   <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/projects" element={<Projects />} />
