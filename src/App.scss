@@ -244,7 +244,7 @@ body {
 /* ******* PROJECTS PAGE ********** */
 
 .projects-container {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .skills-col {
@@ -254,21 +254,22 @@ body {
 }
 
 .skills-label img {
-  width: 40px;
+  width: 50px;
 }
 
 .skills-label {
-  font-size: 4em;
+  font-size: 2.5em;
   font-family: "Zephyr", serif;
   text-transform: uppercase;
+  color: var(--text-color);
 }
 
 .skill-list {
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1em;
   text-align: start;
-  color: #ada3a3;
+  color: var(--text-color);
+  width: 80%;
 }
 
 .skill-list-right div {
@@ -290,6 +291,7 @@ body {
   // padding-left: 10%;
   overflow-wrap: break-word;
   font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
 }
 
 .project-title {
@@ -604,7 +606,7 @@ body {
   }
 
   .skills-col {
-    height: 40vh;
+    height: 30vh;
   }
 
   .project-col {
@@ -716,6 +718,10 @@ body {
   .about-text-wrapper{
     width: 80%;
     margin-top: 0;
+  }
+
+  .projects-container {
+    margin-top: 5%;
   }
 
  
