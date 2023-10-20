@@ -289,6 +289,10 @@ body {
   flex-shrink: 0;
 }
 
+.git-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .project-col {
   text-align: start;
   // padding-left: 10%;
