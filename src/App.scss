@@ -249,10 +249,18 @@ body {
   // transform: translateY(20px);
 }
 
+.projects-row{
+  position: relative;
+}
+
 .skills-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: -5%;
   height: 80vh;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   opacity: 0;
 }
 
@@ -272,7 +280,7 @@ body {
   font-size: 1em;
   text-align: start;
   color: var(--text-color);
-  width: 80%;
+  width: 60%;
 }
 
 .skill-list-right div {
@@ -299,7 +307,8 @@ body {
   overflow-wrap: break-word;
   font-family: "Montserrat", sans-serif;
   color: var(--text-color);
- 
+ position: absolute;
+ right: 0;
 
 }
 
@@ -760,6 +769,8 @@ body {
 
   .projects-container {
     margin-top: 5%;
+    height: 100vh;
+   
   }
 
  

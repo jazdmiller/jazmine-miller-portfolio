@@ -54,7 +54,7 @@ function Projects({ isDarkMode }) {
       <div className="container-fluid text-center projects-container mx-md-5">
         <div className="row mr-0">
           <div className="col-12 col-md-6 skills-col d-flex flex-column project-fade ">
-            <div className=" row justify-content-start mr-0">
+            <div className=" row projects-row justify-content-start mr-0">
               <span className="skills-label">
                 <img
                   className="mr-1"
@@ -64,9 +64,9 @@ function Projects({ isDarkMode }) {
               </span>
             </div>
             <div className="row mr-0 pl-2 skill-list ">
-              Showcase of some of my projects utilizing technologies such as
+              <p>Showcase of some of my projects utilizing technologies such as
               React, Javascript, HTML/CSS, Bootstrap, Firebase, Nodejs, and
-              Shopify. You can find more of my work on my <span className="m-0 git-link"><a>github</a></span>!
+              Shopify. You can find more of my work on my <span className="m-0 git-link"><a>github</a></span>.</p>
             </div>
 
           </div>
