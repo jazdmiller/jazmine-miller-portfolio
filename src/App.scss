@@ -319,11 +319,17 @@ body {
 
 .project-subtext {
   font-style: italic;
+  width: 80%;
 }
 
 .project-list{
   opacity: 0;
   transform: translateY(-20px);
+}
+
+.project-list a{
+  color: var(--text-color);
+  text-decoration: none;
 }
 /* ******* PROJECTS PAGE END ********** */
 
