@@ -1,14 +1,18 @@
 
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyCVMOfdmNt6IeWmoDJdK-zwE37dJ9gkpoA",
+  authDomain: "portfolio-jazmine-miller.firebaseapp.com",
+  projectId: "portfolio-jazmine-miller",
+  storageBucket: "portfolio-jazmine-miller.appspot.com",
+  messagingSenderId:"360880565536",
+  appId: "1:360880565536:web:3fd5130a66d4b31396bb45"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app)
+
+export { firestore }
