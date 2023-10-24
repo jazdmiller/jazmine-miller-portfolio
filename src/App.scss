@@ -254,13 +254,9 @@ body {
 }
 
 .skills-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  
   margin-top: -5%;
-  height: 80vh;
-  overflow: hidden;
-  position: fixed;
+
   opacity: 0;
 }
 
@@ -277,10 +273,10 @@ body {
 
 .skill-list {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: .9em;
   text-align: start;
   color: var(--text-color);
-  width: 60%;
+  width: 90%;
 }
 
 .skill-list-right div {
@@ -314,16 +310,15 @@ body {
   overflow-wrap: break-word;
   font-family: "Montserrat", sans-serif;
   color: var(--text-color);
- position: absolute;
- right: 0;
+
 
 }
 
 .project-title {
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 3em;
-  width: 75%;
+  font-size: 2em;
+  width: 90%;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -335,7 +330,9 @@ body {
 
 .project-subtext {
   font-style: italic;
-  width: 80%;
+  font-size: .9em;
+  width: 90%;
+  display: none;
 }
 
 .project-list{
@@ -659,13 +656,9 @@ body {
     width: 75%;
   }
 
-  .skills-col {
-    height: 30vh;
-  }
+  
 
-  .project-col {
-    height: 100vh;
-  }
+
 
   .inner-div {
     width: 80%;
@@ -719,10 +712,27 @@ body {
     margin-top:0%;
   }
 
+  .project-title{
+    font-size: 3em;
+    
+  }
+
+  .project-subtext{
+    width: 80%;
+    display: block;
+  }
   
 }
 
 @media (min-width: 768px) {
+  .project-title{
+    width: 75%;
+  }
+
+  .project-subtext{
+    width: 70%;
+  }
+
   .home-text {
     font-size: 12vw;
   }
@@ -811,11 +821,29 @@ body {
   }
 
   .skills-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-left: -5%;
     height: 80vh;
+    overflow: hidden;
+    position: fixed;
+    opacity: 0;
   }
 
+  .skill-list{
+    width: 60%;
+  }
   .project-col {
-    height: 100vh;
+    text-align: start;
+    // padding-left: 10%;
+    overflow-wrap: break-word;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+   position: absolute;
+   right: 0;
+  
   }
 }
 
@@ -880,6 +908,10 @@ body {
   
   .text-hello h2{
     font-size: 40px;
+  }
+
+  .skill-list{
+    width: 50%;
   }
 }
 

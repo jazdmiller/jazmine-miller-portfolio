@@ -78,7 +78,7 @@ function Projects({ isDarkMode }) {
               <Link key={project.id} to={`/projects/${project.id}`} >
                 
                   <div className="project-title">{project.title}</div>
-                  <div className="project-subtext">{project.technologies}</div>
+                  <div className="project-subtext">{project.meta_description}</div>
                 
               </Link>
               </div>
