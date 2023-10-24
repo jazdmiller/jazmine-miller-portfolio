@@ -297,6 +297,13 @@ body {
   flex-shrink: 0;
 }
 
+.skill-list a{
+  color: var(--text-color);
+}
+
+.skill-list a:visited{
+  color: var(--text-color);
+}
 .git-link {
   text-decoration: underline;
   cursor: pointer;
@@ -657,7 +664,7 @@ body {
   }
 
   .project-col {
-    height: 40vh;
+    height: 100vh;
   }
 
   .inner-div {
@@ -808,7 +815,7 @@ body {
   }
 
   .project-col {
-    height: 80vh;
+    height: 100vh;
   }
 }
 

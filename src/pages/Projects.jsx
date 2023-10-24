@@ -66,7 +66,7 @@ function Projects({ isDarkMode }) {
             <div className="row mr-0 pl-2 skill-list ">
               <p>Showcase of some of my projects utilizing technologies such as
               React, Javascript, HTML/CSS, Bootstrap, Firebase, Nodejs, and
-              Shopify. You can find more of my work on my <span className="m-0 git-link"><a>github</a></span>.</p>
+              Shopify. You can find more of my work on my <span className="m-0 git-link"><a href="https://github.com/jazdmiller" target="_blank">github</a></span>.</p>
             </div>
 
           </div>
@@ -78,23 +78,12 @@ function Projects({ isDarkMode }) {
               <Link key={project.id} to={`/projects/${project.id}`} >
                 
                   <div className="project-title">{project.title}</div>
-                  <div className="project-subtext">{project.meta_description}</div>
+                  <div className="project-subtext">{project.technologies}</div>
                 
               </Link>
               </div>
             ))}
-            <div className="project-list pt-4">
-              <div className="project-title">Workit Landing Page</div>
-              <div className="col project-subtext">Development</div>
-            </div>
-            <div className="project-list pt-4">
-              <div className="project-title">Shakn</div>
-              <div className="project-subtext">Design & Development</div>
-            </div>
-            <div className=" project-list pt-4">
-              <div className="project-title">Shakn</div>
-              <div className="project-subtext">Design & Development</div>
-            </div>
+            
           </div>
         </div>
       </div>
