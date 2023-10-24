@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import StarIcon from '/assets/images/star.svg'
 
 
 function Project() {
+  const [isComponentMounted, setIsComponentMounted] = useState(false)
   const bgDivRef = useRef(null);
   const textRef = useRef(null);
   const imgRef = useRef(null)
@@ -24,6 +25,19 @@ function Project() {
   };
 
   useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  
+    // Disable smooth scrolling behavior specifically for this component
+    document.body.style.scrollBehavior = 'auto';
+  
+    // Cleanup function to enable smooth scrolling behavior when component is unmounted
+    return () => {
+      document.body.style.scrollBehavior = 'smooth';
+    };
+  }, []);
+
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const bgDiv = bgDivRef.current;
     const text = textRef.current;
@@ -34,7 +48,7 @@ function Project() {
       const rect = bgDiv.getBoundingClientRect();
       let mm = gsap.matchMedia();
 
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (rect.top < window.innerHeight && rect.bottom > 0 && isComponentMounted) {
         gsap.to(bgDiv, {
           width: '100%',
           height: '100%',
@@ -114,10 +128,12 @@ function Project() {
       },
     });
 
+    setIsComponentMounted(true);
+     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isComponentMounted]);
 
   return (
     <div className='container' id='smooth-wrapper'>

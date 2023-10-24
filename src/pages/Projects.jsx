@@ -64,9 +64,7 @@ function Projects({ isDarkMode }) {
               </span>
             </div>
             <div className="row mr-0 pl-2 skill-list ">
-              <p>Showcase of some of my projects utilizing technologies such as
-              React, Javascript, HTML/CSS, Bootstrap, Firebase, Nodejs, and
-              Shopify. You can find more of my work on my <span className="m-0 git-link"><a href="https://github.com/jazdmiller" target="_blank">github</a></span>.</p>
+              <p>Showcase of projects reflecting my experience with techologies such as React, HTML/CSS, and Firebase database/deployment. You can find more of my work on my <span className="m-0 git-link"><a href="https://github.com/jazdmiller" target="_blank">github</a></span>.</p>
             </div>
 
           </div>
