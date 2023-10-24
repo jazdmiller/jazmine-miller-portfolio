@@ -112,6 +112,7 @@ body {
     font-size: 1em;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
+    text-decoration: underline;
   }
 
   a:before,
@@ -124,22 +125,22 @@ body {
     background: var(--text-color);
     border-radius: 4px;
     transition: all 0.3s;
+    
   }
 
-  a:before {
-    width: 40px;
-    right: 110%;
-  }
+  
   a:after {
     width: 0%;
     left: 110%;
+    
   }
 
-  a:hover:before {
-    width: 0%;
-  }
+  
+
+ 
   a:hover:after {
     width: 40px;
+    text-decoration: none;
   }
 
   a span {
@@ -183,6 +184,7 @@ body {
     top: 7px;
     right: -18px;
     opacity: 1;
+    
   }
 
   a:hover span:after {
@@ -190,6 +192,10 @@ body {
     top: 17px;
     right: -18px;
     opacity: 1;
+  }
+
+  a:hover{
+    text-decoration: none;
   }
 }
 

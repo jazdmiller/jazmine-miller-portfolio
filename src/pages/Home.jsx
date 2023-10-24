@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import ArrowIcon from '../../public/assets/images/icons8-arrow-50.png'
 import { motion } from 'framer-motion';
 import AnimatedText from '../components/AnimatedText';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -103,7 +104,7 @@ const subText = {
             <div className='row btn-row'>
                 <div className='col btn-col '>
                   <motion.div variants={portText} initial="hidden" animate="visible">
-                    <a href="#">Portfolio <span></span></a>
+                    <Link to="/projects">Portfolio <span></span></Link>
                   </motion.div>
                 {/* Portfolio <span className='ml-3 arrow-icon'><img src={ArrowIcon}/></span> */}
                 {/* <div class= 'ml-auto'id='circle' ref={circleRef}></div> */}
