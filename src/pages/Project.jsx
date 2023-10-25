@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gsap } from 'gsap';
-
+import StarIcon from "../../public/assets/images/star.svg";
+import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
 import { collection, doc, getDoc } from 'firebase/firestore';
 import ScrollTrigger  from 'gsap/ScrollTrigger';
-import StarIcon from '/assets/images/star.svg'
+
 import { firestore } from '../firebase';
 
 
-function Project() {
+function Project({ isDarkMode }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false)
 
   const { projectId } = useParams()
@@ -178,7 +179,7 @@ function Project() {
       <div id='smooth-content'>
       <section className='outer-div mx-auto my-5'>
         <div ref={bgDivRef} className='inner-div my-3 bg-div'>
-         <span>{projectDetails.title}<img ref={imgRef} className='mt-3 ' src={StarIcon} /></span>
+         <span>{projectDetails.title}<img ref={imgRef} className='mt-3 ' src={isDarkMode ? DarkStarIcon : StarIcon} /></span>
         </div>
       </section>
 
