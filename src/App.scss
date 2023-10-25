@@ -400,7 +400,7 @@ body {
 
 .intro-row {
   padding-left: 8%;
-  padding-right: 8%;
+  padding-right: 1%;
 }
 
 .details-title-text {
@@ -427,6 +427,14 @@ body {
   font-size: 1.1rem;
 }
 
+.role-subtext a{
+  color: var(--text-color);
+}
+
+.role-subtext a:visited{
+  color: var(--text-color);
+}
+
 .bg-img {
   height: 35vh;
   background-color: #505654;
@@ -434,7 +442,6 @@ body {
 }
 
 .bg-desktop {
-  background-image: url("/public/assets/images/desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

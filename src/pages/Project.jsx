@@ -17,6 +17,7 @@ function Project() {
   const bgDivRef = useRef(null);
   const textRef = useRef(null);
   const imgRef = useRef(null)
+  
 
 
   const throttle = (func, limit) => {
@@ -49,6 +50,7 @@ function Project() {
     }
 
     fetchProjectDetails()
+
     gsap.registerPlugin(ScrollTrigger);
 
     setIsComponentMounted(true)
@@ -183,7 +185,7 @@ function Project() {
       <section>      
         <div className='row intro-row'>
         <div ref={textRef} className='intro-text text-left'>
-        Responsive cocktail recipe finder built with Reactjs, axios, HTML, CSS, Bootstrap, and Framer Motion. Deployed with Firebase.
+        {projectDetails.meta_description}
         </div>
         </div>
       </section>
@@ -192,17 +194,15 @@ function Project() {
         <div className='fade-in-section row intro-row my-5'>
           <div className='col-12 col-md-4 px-0  my-3'>
             <div className='role-text'>Github Repo</div>
-            <div className='role-subtext'>Design & Development</div>
+            <div className='role-subtext'><a target="_blank" href={projectDetails.github_link}>{projectDetails.github_link}</a></div>
           </div>
           <div className='col-12 col-md-4 px-0 my-3'>
           <div className='role-text'>Technologies</div>
-            <div className='role-subtext'>Reactjs, Bootstrap, Axios,
-HTML, CSS, Framer Motion,
-Firebase, Javascript</div>
+            <div className='role-subtext'>{projectDetails.technologies}</div>
           </div>
           <div className='col-12 col-md-4 px-0  my-3'>
           <div className='role-text'>URL</div>
-            <div className='role-subtext'>Design & Development</div>
+            <div className='role-subtext'><a href={projectDetails.project_link} target='_blank'>{projectDetails.project_link}</a></div>
           </div>
         </div>
       </section>
@@ -210,11 +210,11 @@ Firebase, Javascript</div>
       <section>
         <div className='fade-in-section row my-5'>
           <div className='col-12 col-md-6 mb-4 mb-md-0'>
-            <div className='bg-img bg-desktop'>
+            <div className='bg-img bg-desktop' style={{ backgroundImage: `url(${projectDetails.desktop_img})`}}>
             </div>
           </div>
           <div className='col-12 col-md-6'>
-          <div className='bg-img bg-mobile'></div>
+          <div className='bg-img bg-mobile' style={{ backgroundImage: `url(${projectDetails.mobile_img})`}}></div>
           </div>
         </div>
       </section>
@@ -223,10 +223,7 @@ Firebase, Javascript</div>
 
         <div className='row fade-in-section intro-row project-description my-5'>
           <div className='col-12 '>
-        Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
-          </div>
-          <div className=' fade-in-section col-12 mt-3'>
-        Lorem ipsum dolor sit amet consectetur. Suspendisse sit pulvinar sit et viverra amet id amet. Sagittis ultrices aliquet lectus fermentum quam viverra vitae arcu. Lorem ipsum dolor sit amet consectetur. Suspendisse sit 
+        {projectDetails.description}
           </div>
         </div>
 
@@ -235,7 +232,7 @@ Firebase, Javascript</div>
             Live Site
           </div>
           <div className='col fade-in-section text-center link-live-site py-3'>
-          <span className='link-border'>https://shakn-fbf84.web.app/</span>
+          <span className='link-border'>{projectDetails.project_link}</span>
           </div>
         </div>
 
