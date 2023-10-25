@@ -5,11 +5,11 @@ import StarIcon from "../../public/assets/images/star.svg";
 import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
 import { collection, doc, getDoc } from 'firebase/firestore';
 import ScrollTrigger  from 'gsap/ScrollTrigger';
-
+import { Link } from 'react-router-dom';
 import { firestore } from '../firebase';
 
 
-function Project({ isDarkMode }) {
+function ProjectDetails({ isDarkMode }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false)
 
   const { projectId } = useParams()
@@ -237,10 +237,15 @@ function Project({ isDarkMode }) {
           </div>
         </div>
 
+        <div className='row intro-row footer justify-content-center my-5' >
+          <Link to='/projects'>Back to projects</Link>
+        </div>
+
       </section>
+
       </div>
     </div>
   );
 }
 
-export default Project;
+export default ProjectDetails;

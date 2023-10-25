@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import './App.scss'
 import Navbar from './components/Navbar'
-import ScrollTriggerTest from './pages/Project';
+import ScrollTriggerTest from './pages/ProjectDetails';
 import Home from './pages/Home'
-import Project from './pages/Project';
+import ProjectDetails from './pages/ProjectDetails';
 import Projects from './pages/Projects'
 import { gsap } from 'gsap';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
+
 
 
 function App() {
@@ -123,7 +124,7 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/projects" element={<Projects isDarkMode={isDarkMode}/>} />
-         <Route path="/projects/:projectId" element={<Project isDarkMode={isDarkMode}/>} />
+         <Route path="/projects/:projectId" element={<ProjectDetails  isDarkMode={isDarkMode}/>} />
          <Route path="/about" element={<About isDarkMode={isDarkMode}/>} />
          <Route path="/contact" element={<Contact />} />
       </Routes>

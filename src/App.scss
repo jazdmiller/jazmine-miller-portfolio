@@ -487,6 +487,24 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
+.footer{
+  font-size: 1.2em;
+}
+
+.footer a{
+  color: var(--text-color);
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+.footer a:visited{
+  color: var(--text-color);
+}
+
+
+
 .fade-in-section {
   opacity: 0;
   transform: translateY(-50px);
