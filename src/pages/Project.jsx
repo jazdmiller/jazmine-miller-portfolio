@@ -1,11 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { collection, doc, getDoc } from 'firebase/firestore';
+import ScrollTrigger  from 'gsap/ScrollTrigger';
 import StarIcon from '/assets/images/star.svg'
+import { firestore } from '../firebase';
 
 
 function Project() {
   const [isComponentMounted, setIsComponentMounted] = useState(false)
+
+  const { projectId } = useParams()
+  const [projectDetails, setProjectDetails] = useState(null)
+
   const bgDivRef = useRef(null);
   const textRef = useRef(null);
   const imgRef = useRef(null)
@@ -25,6 +33,28 @@ function Project() {
   };
 
   useEffect(() => {
+    const fetchProjectDetails = async () => {
+      try {
+        const projectDocRef = doc(firestore, 'projects', projectId);
+        const docSnapshot = await getDoc(projectDocRef);
+    
+        if (docSnapshot.exists()) {
+          setProjectDetails(docSnapshot.data());
+        } else {
+          console.log('Project not found!');
+        }
+      } catch (error) {
+        console.error('Error fetching project:', error);
+      }
+    }
+
+    fetchProjectDetails()
+    gsap.registerPlugin(ScrollTrigger);
+
+    setIsComponentMounted(true)
+  }, [projectId]) 
+
+  useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   
@@ -38,13 +68,16 @@ function Project() {
   }, []);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    
     const bgDiv = bgDivRef.current;
     const text = textRef.current;
     const image = imgRef.current;
   
 
     const handleScroll = throttle(() => {
+      const bgDiv = bgDivRef.current;
+    const text = textRef.current;
+    const image = imgRef.current;
       const rect = bgDiv.getBoundingClientRect();
       let mm = gsap.matchMedia();
 
@@ -135,12 +168,15 @@ function Project() {
     };
   }, [isComponentMounted]);
 
+  if(!projectDetails) {
+    return <div>Loading...</div>
+  }
   return (
     <div className='container' id='smooth-wrapper'>
       <div id='smooth-content'>
       <section className='outer-div mx-auto my-5'>
         <div ref={bgDivRef} className='inner-div my-3 bg-div'>
-         <span>Shakn<img ref={imgRef} className='mt-3 ' src={StarIcon} /></span>
+         <span>{projectDetails.title}<img ref={imgRef} className='mt-3 ' src={StarIcon} /></span>
         </div>
       </section>
 
@@ -155,7 +191,7 @@ function Project() {
       <section className=''>
         <div className='fade-in-section row intro-row my-5'>
           <div className='col-12 col-md-4 px-0  my-3'>
-            <div className='role-text'>Role</div>
+            <div className='role-text'>Github Repo</div>
             <div className='role-subtext'>Design & Development</div>
           </div>
           <div className='col-12 col-md-4 px-0 my-3'>

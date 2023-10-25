@@ -123,7 +123,7 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/projects" element={<Projects isDarkMode={isDarkMode}/>} />
-         <Route path="/projects/:id" element={<Project />} />
+         <Route path="/projects/:projectId" element={<Project />} />
          <Route path="/about" element={<About isDarkMode={isDarkMode}/>} />
          <Route path="/contact" element={<Contact />} />
       </Routes>
