@@ -397,15 +397,17 @@ body {
   opacity: 0;
   transform: translateY(-50px);
   transition: transform 0.2s, opacity 0.2s;
-
+  color: var(--text-color);
   font-family: "Zephyr", serif;
   font-size: 2rem;
   // padding-left: 8%;
 }
 
 .intro-row {
+  margin: 8% 0%;
   padding-left: 8%;
   padding-right: 1%;
+  color: var(--text-color);
 }
 
 .details-title-text {
@@ -419,6 +421,7 @@ body {
   width: 30px;
   height: 30px;
 }
+
 
 .role-text {
   font-family: "Montserrat", sans-serif;
@@ -480,7 +483,7 @@ body {
 .link-live-site:hover {
   background-color: transparent;
   border: solid 2px var(--text-color);
-  color: #252525;
+  color: var(--text-color);
   transition: background-color 0.3s ease-in-out;
 }
 

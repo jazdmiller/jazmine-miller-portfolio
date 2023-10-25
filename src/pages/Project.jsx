@@ -192,7 +192,7 @@ function Project({ isDarkMode }) {
       </section>
 
       <section className=''>
-        <div className='fade-in-section row intro-row my-5'>
+        <div className='fade-in-section row intro-row '>
           <div className='col-12 col-md-4 px-0  my-3'>
             <div className='role-text'>Github Repo</div>
             <div className='role-subtext'><a target="_blank" href={projectDetails.github_link}>{projectDetails.github_link}</a></div>
@@ -209,7 +209,7 @@ function Project({ isDarkMode }) {
       </section>
 
       <section>
-        <div className='fade-in-section row my-5'>
+        <div className='fade-in-section row '>
           <div className='col-12 col-md-6 mb-4 mb-md-0'>
             <div className='bg-img bg-desktop' style={{ backgroundImage: `url(${projectDetails.desktop_img})`}}>
             </div>
@@ -222,7 +222,7 @@ function Project({ isDarkMode }) {
 
       <section>
 
-        <div className='row fade-in-section intro-row project-description my-5'>
+        <div className='row fade-in-section intro-row project-description '>
           <div className='col-12 '>
         {projectDetails.description}
           </div>
