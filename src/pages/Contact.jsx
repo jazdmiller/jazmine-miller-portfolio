@@ -30,8 +30,8 @@ function Contact() {
         </div>
         <div className="row">
           <p>
-            Socials: <a>LinkedIn /</a>
-            <a> Github</a>
+            Socials: <a href="https://www.linkedin.com/in/jazminemiller/" target="_blank">LinkedIn</a><span> / </span>
+            <a href="https://github.com/jazdmiller" target="_blank"> Github</a>
           </p>
         </div>
       </section>

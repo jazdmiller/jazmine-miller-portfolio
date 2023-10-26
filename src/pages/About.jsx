@@ -54,13 +54,13 @@ function About({ isDarkMode }) {
       <section className="about-hero-section">
         <div className="hero-wrapper">
           <div className="row">
-            <div className="col text-center text-md-left text-hello col-md-7">
+            <div className="col text-left text-md-left text-hello col-md-7 p-0 px-md-3">
               <h1 className="about-stagger">Hello,</h1>
               <h2 className=" about-stagger mb-4">
                 I'm Jazmine. A front-end developer and creative thinker.
               </h2>
             </div>
-            <div className=" col-12 img-fade text-center mb-md-0 col-md-5">
+            <div className=" col-12 img-fade text-center mb-md-0 col-md-5 mt-3 mt-md-0">
               <div className="img-container">
                 <img src={Img} />
               </div>

@@ -66,7 +66,7 @@ function Projects({ isDarkMode }) {
                 Projects
               </span>
             </div>
-            <div className="row mr-0 pl-2 skill-list ">
+            <div className="row mr-0 mb-5 mb-md-0 pl-2 skill-list ">
               <p>Showcase of projects reflecting my experience with techologies such as React, HTML/CSS, and Firebase database/deployment. You can find more of my work on my <span className="m-0 git-link"><a href="https://github.com/jazdmiller" target="_blank">github</a></span>.</p>
             </div>
 

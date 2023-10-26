@@ -258,6 +258,7 @@ body {
 
 .loading-container h1{
   font-size: 3em;
+  color: var(--text-color);
 }
 
 .projects-container {
@@ -554,9 +555,10 @@ body {
 .hero-wrapper {
   display: grid;
   place-items: center;
-  height: 80vh;
+  height: 60vh;
   width: 80%;
   // border: 2px solid blue
+  margin-top: 20%;
 }
 
 .img-container img {
@@ -606,7 +608,7 @@ body {
 }
 
 .about-skills{
-  margin-top: 8%;
+  margin-top: 20%;
   font-family: 'Zephyr', serif;
   font-size: 2.5em;
   text-transform: uppercase;
@@ -641,7 +643,7 @@ body {
 }
 
 .contact-row img{
-  width: 40px;
+  width: 30px;
 }
 
 .about-stagger{
@@ -688,8 +690,12 @@ body {
 .email-row{
   margin-top: 10%;
   font-family: 'Montserrat', sans-serif;
-  text-decoration: underline;
   color: var(--text-color);
+}
+
+.email-row a{
+  color: var(--text-color);
+  text-decoration: underline;
 }
 
 .email-row img{
@@ -760,7 +766,9 @@ body {
     font-size: 2.5rem;
   }
 
- 
+  .about-skills{
+    margin-top: 8%;
+  }
 
   .about-hero-text {
     font-family: "Zephyr", serif;
