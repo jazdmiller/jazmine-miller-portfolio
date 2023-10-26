@@ -172,7 +172,9 @@ function ProjectDetails({ isDarkMode }) {
   }, [isComponentMounted]);
 
   if(!projectDetails) {
-    return <div>Loading...</div>
+    return <div className="loading-container">
+    <h1>Loading. . .</h1>
+  </div>
   }
   return (
     <div className='container' id='smooth-wrapper'>
@@ -233,7 +235,7 @@ function ProjectDetails({ isDarkMode }) {
             Live Site
           </div>
           <div className='col fade-in-section text-center link-live-site py-3'>
-          <span className='link-border'>{projectDetails.project_link}</span>
+          <span className='link-border'><a href={projectDetails.project_link} target='_blank'>{projectDetails.project_link}</a></span>
           </div>
         </div>
 

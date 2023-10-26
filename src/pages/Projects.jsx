@@ -48,7 +48,10 @@ function Projects({ isDarkMode }) {
 
   return (
     <div className="container">
-      {isLoading && <div>Loading...</div>}
+      {isLoading && 
+      <div className="loading-container">
+        <h1>Loading. . .</h1>
+      </div>}
       {!isLoading && (
 
       <div className="container-fluid text-center projects-container mx-md-5">
@@ -71,7 +74,7 @@ function Projects({ isDarkMode }) {
 
           <div className="col col-md-6 mr-auto project-col">
             {projects.map((project) => (
-              <div className="project-list pt-4">
+              <div className="project-list pb-5">
 
               <Link key={project.id} to={`/projects/${project.id}`} >
                 

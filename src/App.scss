@@ -249,6 +249,17 @@ body {
 
 /* ******* PROJECTS PAGE ********** */
 
+.loading-container{
+  display: grid;
+  place-items: center;
+  height: 80vh;
+  font-family: 'Zephyr', serif;
+}
+
+.loading-container h1{
+  font-size: 3em;
+}
+
 .projects-container {
   margin-top: 20%;
   // opacity: 0;
@@ -465,6 +476,7 @@ body {
 .project-description {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
+  line-height: 200%;
 }
 
 .title-live-site {
@@ -487,8 +499,23 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
+// .link-live-site a:visited{
+//   color: var(--primary-color);
+// }
+
+.link-live-site a:hover{
+  color: var(--text-color);
+}
+
+
+.link-live-site a{
+  color: var(--primary-color);
+}
+
+
 .footer{
   font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer a{
