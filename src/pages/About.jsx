@@ -3,6 +3,8 @@ import Img from "/assets/images/about-photo.svg";
 import StarIcon from "/assets/images/star.svg";
 import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
 import { gsap } from 'gsap'
+import { Link } from "react-router-dom";
+
 
 function About({ isDarkMode }) {
 
@@ -29,12 +31,23 @@ function About({ isDarkMode }) {
     "SASS",
     "Matrial UI",
     "Git",
+    "axios",
     "Jenkins",
     "Nodejs",
     "Express",
+    "json",
+    "sql",
+    "mongodb",
     "Firebase",
     "Figma",
     "Adobe",
+    "canva",
+    "netlify",
+    "scrum",
+    "github",
+    "gsap",
+    "framer motion",
+
   ];
   return (
     <div className="container ">
@@ -103,11 +116,15 @@ function About({ isDarkMode }) {
                 <div className="col pl-0">
                   <span>
                     <img src={ isDarkMode ? DarkStarIcon : StarIcon} />
-                    Contact Me
+                    <Link to="/contact">Contact Me</Link>
                   </span> <br/>
                   <span>
                     <img src={isDarkMode ? DarkStarIcon : StarIcon} />
-                    Portfolio
+                    <Link to="/projects">Portfolio</Link>
+                  </span> <br />
+                  <span>
+                    <img src={isDarkMode ? DarkStarIcon : StarIcon} />
+                    <Link to="/projects">Resume</Link>
                   </span>
                 </div>
               </div>
