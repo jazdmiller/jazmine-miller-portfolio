@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   return (
-    <nav className="navbar container navbar-expand-lg py-0 px-0">
+    <nav className="navbar container bg-blur  navbar-expand-lg py-0 px-0">
       <button
         class="navbar-toggler"
         type="button"

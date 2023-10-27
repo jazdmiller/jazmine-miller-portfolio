@@ -36,11 +36,16 @@ body {
 /* ******* NAVBAR ********** */
 
 .navbar {
-  // position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+ z-index: 999;
 }
 
+.bg-blur{
+  // background-color: transparent;
+  backdrop-filter: blur(10px);
+}
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 1.5rem;
 }
