@@ -1,37 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import SunIcon from "../../public/assets/images/icons8-sun.svg";
 import MoonIcon from "../../public/assets/images/moon-icon.png";
+import DarkMenuIcon from "../../public/assets/images/dark-menu-icon.svg";
 import { Link } from "react-router-dom";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav className="navbar container bg-blur  navbar-expand-lg py-0 px-0">
       <button
-        class="navbar-toggler"
+        className={`navbar-toggler ml-auto mt-4 ${isActive ? "collapsed" : ""}`}
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
+        onClick={toggleMenu}
         aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
+        aria-expanded={isActive ? "true" : "false"}
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        {isActive ? (
+          <span className="menu-icon">
+            <img src={DarkMenuIcon} alt="Menu Icon" />
+          </span>
+        ) : (
+          <span className="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        )}
       </button>
       <div
-        class="collapse navbar-collapse py-3 justify-content-between"
+        className={`collapse navbar-collapse py-3 justify-content-between ${
+          isActive ? "show" : ""
+        }`}
         id="navbarNavAltMarkup"
       >
-        <div class="navbar-nav ml-3">
-          <Link class="nav-item nav-link" to="/">
+        <div className="navbar-nav ml-3">
+          <Link className="nav-item nav-link" to="/">
             Home
           </Link>
-          <Link class="nav-item nav-link" to="/projects">
+          <Link className="nav-item nav-link" to="/projects">
             Projects
           </Link>
-          <Link class="nav-item nav-link" to="/about">
+          <Link className="nav-item nav-link" to="/about">
             About
           </Link>
-          <Link class="nav-item nav-link" to="/contact">
+          <Link className="nav-item nav-link" to="/contact">
             Contact
           </Link>
         </div>
@@ -40,7 +58,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           src={isDarkMode ? MoonIcon : SunIcon}
           alt={isDarkMode ? "Sun Icon" : "Moon Icon"}
           onClick={toggleDarkMode}
-          style={{cursor: 'pointer'}}
+          style={{ cursor: "pointer" }}
         />
       </div>
     </nav>
