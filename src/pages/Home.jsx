@@ -82,7 +82,7 @@ const subText = {
                 </motion.div>
                 </div>
             </div>
-            <div className='row dev-row mb-5 mb-md-0'>
+            <div className='row dev-row  mb-md-0'>
                 <div className='col home-text developer-col'>
                   <motion.div variants={containerDev} animate="visible" initial="hidden">
                      <AnimatedText text="Developer" />

@@ -139,6 +139,7 @@ body {
 .home-page {
   background-color: var(--primary-color);
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .nav-item.nav-link {
@@ -184,7 +185,8 @@ body {
 }
 
 .name-text {
-  font-weight: 700;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .btn-row {
@@ -192,7 +194,7 @@ body {
 }
 .btn-col {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3em;
+  font-size: 1em;
 
   a {
     position: relative;
@@ -820,8 +822,17 @@ body {
     color: var(--primary-color);
     text-transform: uppercase;
     font-family: "Zephyr", serif !important;
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
+  .developer-col {
+    margin-bottom: 20%
+  }
+  
+  .intro-text{
+    margin-top: 20%;
+  }
   
 }
 @media (min-width: 375px) {
@@ -837,7 +848,7 @@ body {
   }
 
   .btn-col {
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: auto;
   }
 
@@ -984,9 +995,7 @@ body {
 
  
 
-  // .name-text{
-  //   margin-top: -10%;
-  // }
+
 
   html,
   body {
