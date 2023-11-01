@@ -14,36 +14,42 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   // };
 
   return (
-    <nav className='container nav-bg navbar-expand-lg py-3 px-0'>
-      <div className="row mr-0">
-        <div className="col">
-      <button
-        className="bg-blur navbar-toggler d-lg-none"
-        type="button"
-        data-toggle="modal"
-        data-target="#mobileMenuModal"
-        aria-label="Toggle navigation"
-      >
-        {/* {isActive ? (
+    <nav className="container nav-bg navbar-expand-lg py-3 px-0">
+      <div className="row mx-2">
+        <div className="col d-lg-none">
+        <img
+        className="darkmode-icon mr-4"
+        src={isDarkMode ? MoonIcon : SunIcon}
+        alt={isDarkMode ? "Sun Icon" : "Moon Icon"}
+        onClick={toggleDarkMode}
+        style={{ cursor: "pointer" }}
+      />
+        </div>
+
+        <div className="col text-right">
+          <button
+            className="align-top p-0 navbar-toggler d-lg-none "
+            type="button"
+            data-toggle="modal"
+            data-target="#mobileMenuModal"
+            aria-label="Toggle navigation"
+          >
+            {/* {isActive ? (
           <span className="menu-icon">
             <img src={DarkMenuIcon} alt="Menu Icon" />
           </span>
         ) : ( */}
-          <span className="mobile-menu-icon ml-auto mr-4">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-      </button>
-        </div>
-
-        <div className="col">
-
+            <span className="mobile-menu-icon  mr-4">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
         </div>
       </div>
 
-      <DesktopMenu isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-      <MobileMenu className="nav-margin"/>
+      <DesktopMenu isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <MobileMenu className="nav-margin" isDarkMode={isDarkMode} />
 
       {/* <div
         className="collapse navbar-collapse py-3 justify-content-between d-none d-flex">
