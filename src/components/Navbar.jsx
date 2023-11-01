@@ -18,7 +18,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
       <div className="row mx-2">
         <div className="col d-lg-none">
         <img
-        className="darkmode-icon mr-4"
+        className="darkmode-icon ml-3"
         src={isDarkMode ? MoonIcon : SunIcon}
         alt={isDarkMode ? "Sun Icon" : "Moon Icon"}
         onClick={toggleDarkMode}

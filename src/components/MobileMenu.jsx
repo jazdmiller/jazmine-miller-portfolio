@@ -15,16 +15,20 @@ function MobileMenu({isDarkMode}) {
           </div>
           <div className="modal-body">
             <ul className="nav flex-column text-center">
-              <Link className="nav-item nav-link mt-5" to="/">
+              <Link className="nav-item nav-link mt-5" to="/" data-toggle="modal"
+            data-target="#mobileMenuModal">
                 Home
               </Link>
-              <Link className="nav-item nav-link mt-4" to="/projects">
+              <Link className="nav-item nav-link mt-4" to="/projects" data-toggle="modal"
+            data-target="#mobileMenuModal">
                 Projects
               </Link>
-              <Link className="nav-item nav-link mt-4" to="/about">
+              <Link className="nav-item nav-link mt-4" to="/about" data-toggle="modal"
+            data-target="#mobileMenuModal">
                 About
               </Link>
-              <Link className="nav-item nav-link mt-4" to="/contact">
+              <Link className="nav-item nav-link mt-4" to="/contact" data-toggle="modal"
+            data-target="#mobileMenuModal">
                 Contact
               </Link>
             </ul>
