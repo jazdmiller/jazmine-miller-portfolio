@@ -830,9 +830,7 @@ body {
     margin-bottom: 20%
   }
   
-  .intro-text{
-    margin-top: 20%;
-  }
+ 
   
 }
 @media (min-width: 375px) {
@@ -856,14 +854,11 @@ body {
     width: 75%;
   }
 
-  
-
-
-
   .inner-div {
     width: 90%;
     min-height: 35vh;
     font-size: 3rem;
+    margin-top: -20% ;
   }
 
   .inner-div img {

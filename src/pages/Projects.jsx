@@ -74,7 +74,7 @@ function Projects({ isDarkMode }) {
 
           <div className="col col-md-6 mr-auto project-col">
             {projects.map((project) => (
-              <div className="project-list pb-5">
+              <div className="project-list pb-4 pb-md-5">
 
               <Link key={project.id} to={`/projects/${project.id}`} >
                 
