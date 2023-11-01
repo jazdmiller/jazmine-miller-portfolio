@@ -33,6 +33,7 @@ function About({ isDarkMode }) {
     "Git",
     "axios",
     "Jenkins",
+    "JIRA",
     "Nodejs",
     "Express",
     "json",

@@ -180,7 +180,7 @@ function ProjectDetails({ isDarkMode }) {
     <div className='container' id='smooth-wrapper'>
       <div id='smooth-content'>
       <section className='outer-div mx-auto my-5'>
-        <div ref={bgDivRef} className='inner-div my-3 bg-div'>
+        <div ref={bgDivRef} className='inner-div my-md-3 bg-div'>
          <span>{projectDetails.title}<img ref={imgRef} className='mt-3 ' src={isDarkMode ? DarkStarIcon : StarIcon} /></span>
         </div>
       </section>

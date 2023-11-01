@@ -34,7 +34,9 @@ body {
 }
 
 /* ******* NAVBAR ********** */
-
+.modal-dialog{
+  z-index: 1000;
+}
 /* styles.module.css */
 .mobile-menu-icon {
   display: flex;
@@ -82,9 +84,26 @@ body {
  z-index: 999;
 }
 
+.nav-bg{
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.modal-backdrop{
+  position: unset !important;
+}
 .bg-blur{
   // background-color: transparent;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+}
+
+.nav-margin{
+  margin-bottom: 10%;
 }
 
 .full-bg{
@@ -111,9 +130,7 @@ body {
   transition: text-decoration 0.3s ease;
 }
 
-.navbar-collapse {
-  
-}
+
 
 .darkmode-icon {
   width: 30px;
@@ -449,6 +466,7 @@ body {
   font-family: "Zephyr", serif;
   text-transform: uppercase;
   font-size: 4rem;
+  margin-top: 40%;
 }
 
 .inner-div span{

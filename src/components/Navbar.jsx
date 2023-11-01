@@ -14,9 +14,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   // };
 
   return (
-    <nav className='navbar container bg-blur navbar-expand-lg py-0 px-0'>
+    <nav className='container nav-bg navbar-expand-lg py-3 px-0'>
+      <div className="row mr-0">
+        <div className="col">
       <button
-        className="navbar-toggler ml-auto mt-4 d-lg-none"
+        className="bg-blur navbar-toggler d-lg-none"
         type="button"
         data-toggle="modal"
         data-target="#mobileMenuModal"
@@ -27,15 +29,21 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             <img src={DarkMenuIcon} alt="Menu Icon" />
           </span>
         ) : ( */}
-          <span className="mobile-menu-icon">
+          <span className="mobile-menu-icon ml-auto mr-4">
             <span></span>
             <span></span>
             <span></span>
           </span>
       </button>
+        </div>
+
+        <div className="col">
+
+        </div>
+      </div>
 
       <DesktopMenu isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-      <MobileMenu />
+      <MobileMenu className="nav-margin"/>
 
       {/* <div
         className="collapse navbar-collapse py-3 justify-content-between d-none d-flex">
