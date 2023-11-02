@@ -63,7 +63,7 @@ const subText = {
            type: "spring",
            damping: 20,
            stiffness: 100,
-           delay: .7
+           delay: .9
        }
    }
  }

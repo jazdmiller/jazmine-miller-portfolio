@@ -200,7 +200,7 @@ body {
     position: relative;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     text-decoration: underline;
@@ -537,10 +537,13 @@ body {
 .role-subtext {
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
+  width: 80%;
+  word-wrap: break-word;
 }
 
 .role-subtext a{
   color: var(--text-color);
+  text-decoration: underline;
 }
 
 .role-subtext a:visited{
@@ -590,6 +593,10 @@ body {
   border: solid 2px var(--text-color);
   color: var(--text-color);
   transition: background-color 0.3s ease-in-out;
+
+    a{
+      color: var(--text-color);
+    }
 }
 
 // .link-live-site a:visited{
@@ -829,7 +836,18 @@ body {
   .developer-col {
     margin-bottom: 20%
   }
+
+  .about-text-section{
+    margin-top: 40%;
+  }
   
+  .contact-title h1{
+    font-size: 4em;
+  }
+
+  .btn-col a {
+    font-size: 1em;
+  }
  
   
 }

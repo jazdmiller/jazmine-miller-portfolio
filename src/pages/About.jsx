@@ -61,7 +61,7 @@ function About({ isDarkMode }) {
                 I'm Jazmine. A front-end developer and creative thinker.
               </h2>
             </div>
-            <div className=" col-12 img-fade text-center mb-md-0 col-md-5 mt-3 mt-md-0">
+            <div className=" col-12 img-fade text-left pl-0 text-md-center mb-md-0 col-md-5 my-3 mt-md-0">
               <div className="img-container">
                 <img src={Img} />
               </div>
@@ -70,7 +70,7 @@ function About({ isDarkMode }) {
         </div>
       </section>
 
-      <section className="about-text-section  my-5 my-md-0">
+      <section className="about-text-section my-md-0">
         <div className="about-text-wrapper">
           <div className="row w-100 w-md-75">
             <div className="col-12 ">
