@@ -13,7 +13,7 @@ function Contact() {
     });
   });
   return (
-    <div className="container contact-container">
+    <div className="container contact-container pl-4">
       <section className="contact-title">
         <div className="row">
           <h1 className="contact-fade">Contact Me</h1>

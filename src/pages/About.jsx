@@ -2,27 +2,25 @@ import React, { useEffect } from "react";
 import Img from "/assets/images/about-photo.svg";
 import StarIcon from "/assets/images/star.svg";
 import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
-import { gsap } from 'gsap'
+import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 
-
 function About({ isDarkMode }) {
-
   useEffect(() => {
-    gsap.to('.about-stagger', {
+    gsap.to(".about-stagger", {
       opacity: 1,
       y: 0,
-      duration: .6,
-      stagger: .2,
-      ease: "power2.inOut"
-    })
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.inOut",
+    });
 
-    gsap.to('.img-fade', {
+    gsap.to(".img-fade", {
       opacity: 1,
-      duration: .6,
-      ease: "power2.inOut"
-    })
-  }, [])
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+  }, []);
   const skills = [
     "Reactjs",
     "Javascript",
@@ -48,7 +46,6 @@ function About({ isDarkMode }) {
     "github",
     "gsap",
     "framer motion",
-
   ];
   return (
     <div className="container ">
@@ -74,23 +71,25 @@ function About({ isDarkMode }) {
         <div className="about-text-wrapper">
           <div className="row w-100 w-md-75">
             <div className="col-12 ">
-  
               <p className="about-stagger">
-                I've been on this exciting journey for 3+ years and have
-                equipped myself with a diverse toolbox that includes React,
-                JavaScript, HTML/CSS, and Bootstrap, among various other
-                frontend frameworks/libraries. With a background in digital
-                marketing, I bring a unique perspective to my work,
-                understanding the delicate balance between aesthetics and
-                functionality. Moreover, my dedication to continuous learning
-                allows me to implement innovative solutions tailored to unique
-                needs!
+                Over three years in the tech industry have taught me the power
+                of cultivating a growth mindset and an endless curiosity for
+                what’s possible. It started while managing an Etsy shop that
+                ultimately became a crash course in marketing and design. That
+                experience sparked a passion for web design + development that
+                would soon come to steer my creative and professional
+                trajectory! From there, I completed General Assembly’s software
+                engineering bootcamp, and continued my growth through
+                transformative hands-on experience as a UX Developer intern. My
+                toolbox includes React, Javascript, HTML/CSS, and UI/UX design
+                principles, among various other frontend frameworks/libraries. 
               </p>
 
               <p className="about-stagger">
-                I'm a firm believer in collaboration and am excited at the
-                prospect of joining a team dedicated to creativity and bringing
-                projects to life. Free to reach out!
+                I'm a firm believer in collaboration and I’m excited at the
+                prospect of joining a team dedicated to creativity, inclusivity,
+                and bringing projects to life. Feel free to reach out with any
+                new opportunities!
               </p>
               {/* <p>
                 I'm a firm believer in collaboration and recognize the
@@ -116,13 +115,15 @@ function About({ isDarkMode }) {
               <div className="my-5 row contact-row">
                 <div className="col pl-0">
                   <span>
-                    <img src={ isDarkMode ? DarkStarIcon : StarIcon} />
+                    <img src={isDarkMode ? DarkStarIcon : StarIcon} />
                     <Link to="/contact">Contact Me</Link>
-                  </span> <br/>
+                  </span>{" "}
+                  <br />
                   <span>
                     <img src={isDarkMode ? DarkStarIcon : StarIcon} />
                     <Link to="/projects">Portfolio</Link>
-                  </span> <br />
+                  </span>{" "}
+                  <br />
                   <span>
                     <img src={isDarkMode ? DarkStarIcon : StarIcon} />
                     <Link to="/projects">Resume</Link>

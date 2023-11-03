@@ -73,7 +73,7 @@ const subText = {
     <div className='home-page'>
 
         <div className='home-container mx-auto'>
-            <div className='fluid-container home-wrapper'>
+            <div className='fluid-container home-wrapper ml-4 ml-md-0'>
 
             <div className='row frontend-row'>
                 <div className='col home-text text-left text-lg-right'>

@@ -27,6 +27,7 @@ body {
   background: var(--primary-color);
   width: 100vw;
   overflow-x: hidden;
+  transition: background .3s ease-in-out;
 }
 
 .row {
@@ -110,6 +111,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: background-color .3s ease-in-out
 }
 
 .modal-backdrop{
@@ -138,8 +140,9 @@ body {
 
 .home-page {
   background-color: var(--primary-color);
-  height: 100vh;
+  // height: 70vh;
   overflow-x: hidden;
+  transition: background-color .3s ease-in-out;
 }
 
 .nav-item.nav-link {
@@ -490,6 +493,7 @@ body {
   text-transform: uppercase;
   font-size: 4rem;
   margin-top: 40%;
+  transition: background-color .3s ease-in-out
 }
 
 .inner-div span{
@@ -848,6 +852,8 @@ body {
   .btn-col a {
     font-size: 1em;
   }
+
+  
  
   
 }
@@ -860,7 +866,8 @@ body {
   }
 
   .home-container {
-    min-height: 80vh;
+    min-height: 70vh;
+    margin: 0;
   }
 
   .btn-col {
@@ -924,7 +931,7 @@ body {
   }
 
   .contact-container{
-    margin-top:0%;
+    margin-top: 0%;
   }
 
   .project-title{
