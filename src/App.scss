@@ -27,7 +27,7 @@ body {
   background: var(--primary-color);
   width: 100vw;
   overflow-x: hidden;
-  transition: background .3s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
 .row {
@@ -111,7 +111,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  transition: background-color .3s ease-in-out
+  transition: background-color .2s ease-in-out
 }
 
 .modal-backdrop{
@@ -142,7 +142,7 @@ body {
   background-color: var(--primary-color);
   // height: 70vh;
   overflow-x: hidden;
-  transition: background-color .3s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 
 .nav-item.nav-link {
@@ -302,8 +302,8 @@ body {
 }
 
 .home-wrapper {
-  margin-left: 127px;
-  margin-right: 190px;
+  // margin-left: 127px;
+  // margin-right: 190px;
 }
 
 #circle {
@@ -960,8 +960,8 @@ body {
   }
 
   .home-wrapper {
-    margin-left: 127px;
-    margin-right: 190px;
+    // margin-left: 127px;
+    // margin-right: 190px;
   }
 
   .home-container {
@@ -1014,9 +1014,7 @@ body {
   }
 
  
-  .btn-col{
-    margin-left: 10%;
-  }
+ 
 
 
   html,
