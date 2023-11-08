@@ -7,6 +7,8 @@ Showcase of my projects built with React, Vite, JSX, HTML/CSS, Bootstrap, GSAP. 
 
 
 ## Component Hierarchy
+
+```
 Portfolio Site
 ├── Navbar
 │   ├── Home Link
