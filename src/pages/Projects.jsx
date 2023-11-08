@@ -74,11 +74,11 @@ function Projects({ isDarkMode }) {
 
           <div className="col col-md-6 mr-auto project-col">
             {projects.map((project) => (
-              <div className="project-list pb-4 pb-md-5">
+              <div className="project-list pb-4 pb-md-5 pt-md-3">
 
               <Link key={project.id} to={`/projects/${project.id}`} >
                 
-                  <div className="project-title">{project.title}</div>
+                  <div className="project-title"><h1>{project.title}</h1></div>
                   <div className="project-subtext">{project.meta_description}</div>
                 
               </Link>

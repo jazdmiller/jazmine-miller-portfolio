@@ -74,13 +74,13 @@ function About({ isDarkMode }) {
               <p className="about-stagger">
                 Over three years in the tech industry have taught me the power
                 of cultivating a growth mindset and an endless curiosity for
-                what’s possible. It started while managing an Etsy shop that
+                what’s possible! It started while managing an Etsy shop in 2020 that
                 ultimately became a crash course in marketing and design. That
-                experience sparked a passion for web design + development that
+                experience sparked a passion for web design and development that
                 would soon come to steer my creative and professional
-                trajectory! From there, I completed General Assembly’s software
-                engineering bootcamp, and continued my growth through
-                transformative hands-on experience as a UX Developer intern. My
+                trajectory. From there, I completed General Assembly’s software
+                engineering bootcamp, and continued to grow my skills through
+                hands-on experience as a UX Developer intern. My
                 toolbox includes React, Javascript, HTML/CSS, and UI/UX design
                 principles, among various other frontend frameworks/libraries. 
               </p>
@@ -124,10 +124,6 @@ function About({ isDarkMode }) {
                     <Link to="/projects">Portfolio</Link>
                   </span>{" "}
                   <br />
-                  <span>
-                    <img src={isDarkMode ? DarkStarIcon : StarIcon} />
-                    <Link to="/projects">Resume</Link>
-                  </span>
                 </div>
               </div>
             </div>

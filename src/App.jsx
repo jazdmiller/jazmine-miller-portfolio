@@ -43,7 +43,7 @@ function App() {
      togglePageCursor(x);
      x.addListener(togglePageCursor);
   
-     body.addEventListener("mousemove", onMouseMove);
+     body.addEventListener("mousemove", onMouseMove); 
      document.querySelectorAll(".hoverable").forEach((e) => {
         e.addEventListener("mouseenter", onMouseHover);
         e.addEventListener("mouseleave", onMouseHoverOut);

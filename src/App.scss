@@ -434,10 +434,11 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
-.project-title:hover {
+.project-title h1:hover {
   font-style: italic;
   font-weight: 300;
   transform: translateX(10px);
+  transition: transform 0.2s ease-in-out;
 }
 
 .project-subtext {
