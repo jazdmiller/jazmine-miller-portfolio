@@ -1,8 +1,8 @@
 # Portfolio
 
 <p align="center">
-  <img alt="Image 1" src="https://github.com/jazdmiller/jazmine-miller-portfolio/assets/90724224/ffb98cce-21f8-4e0c-b834-7caee2389b17" width="50%" />
-  <img alt="Image 2" src="https://github.com/jazdmiller/jazmine-miller-portfolio/assets/90724224/51ef7d8b-0331-4e4a-8163-621f99f8661d" width="50%" />
+  <img alt="Image 1" src="https://github.com/jazdmiller/jazmine-miller-portfolio/assets/90724224/ffb98cce-21f8-4e0c-b834-7caee2389b17" width="45%" />
+  <img alt="Image 2" src="https://github.com/jazdmiller/jazmine-miller-portfolio/assets/90724224/51ef7d8b-0331-4e4a-8163-621f99f8661d" width="45%" />
 </p>
 
 ## Description
