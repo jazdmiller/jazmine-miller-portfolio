@@ -19,6 +19,7 @@ React, Vite, JSX, HTML/CSS, Bootstrap, SASS, GSAP. Deployed with Firebase and I 
 - Live demos & code repos
 - Performance optimization
 - Light/dark mode
+- GSAP animations
 - Custom cursor design
 - Hover animations
 
