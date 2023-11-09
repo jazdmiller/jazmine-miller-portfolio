@@ -8,7 +8,7 @@
 ## Live Site 
 
 ## Description
-I wanted my portfolio to embody a sleek, minimal aesthetic, enhancing the user experience and focusing more attention on my showcased projects. By opting for a more clean layout, I aimed to create an uncluttered digital space that enables visitors to intuitively navigate and explore my work. 
+My portfolio embodies a sleek, minimal aesthetic, enhancing the user experience and focusing more attention on my showcased projects. By opting for a more clean layout, I aimed to create an uncluttered digital space that enables visitors to intuitively navigate and explore my work. 
 
 ## Built With
 React, Vite, JSX, HTML/CSS, Bootstrap, SASS, GSAP. Deployed with Firebase and I used Figma for wireframes/mockups.
@@ -67,3 +67,6 @@ Portfolio Site
 - Stackoverflow
 - Home page animated arrow: https://codepen.io/scifriday/pen/KZLOLr
 - GSAP custom cursor: https://gsap.com/community/forums/topic/21161-animated-mouse-cursor/
+
+## Author
+LinkedIn - [Jazmine Miller](https://www.linkedin.com/in/jazminemiller/)
