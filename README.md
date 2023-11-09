@@ -8,7 +8,7 @@
 ## Live Site 
 
 ## Description
-I wanted my portfolio to embody a sleek, minimal aesthetic, enhancing the user experience and focusing more attention on my showcased projects. By opting for a more clean layout, I aimed to create an uncluttered digital space that enables visitors to intuitively navigate and explore my work. Inspiration from Lauren Waller's portfolio https://www.lauren-waller.com/.
+I wanted my portfolio to embody a sleek, minimal aesthetic, enhancing the user experience and focusing more attention on my showcased projects. By opting for a more clean layout, I aimed to create an uncluttered digital space that enables visitors to intuitively navigate and explore my work. 
 
 ## Built With
 React, Vite, JSX, HTML/CSS, Bootstrap, SASS, GSAP. Deployed with Firebase and I used Figma for wireframes/mockups.
@@ -60,4 +60,9 @@ Portfolio Site
     ├── GitHub Profile Link
     └── LinkedIn Profile Link
 ```
-
+## Resources
+- A lot of my inspiration was drawn from Lauren Waller's portfolio https://www.lauren-waller.com/!
+- [React Docs](https://react.dev/)
+- Stackoverflow
+- Home page animated arrow: https://codepen.io/scifriday/pen/KZLOLr
+- GSAP custom cursor: https://gsap.com/community/forums/topic/21161-animated-mouse-cursor/
