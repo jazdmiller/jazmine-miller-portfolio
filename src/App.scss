@@ -1025,11 +1025,12 @@ body {
 
   .cursor {
     pointer-events: none;
+    display: block;
 
     .cursor__ball {
-      left: 0;
+      // left: 0;
       position: fixed;
-      top: 0;
+      // top: 0;
       z-index: 1000;
     }
 

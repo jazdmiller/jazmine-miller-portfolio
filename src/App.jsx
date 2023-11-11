@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.scss'
 import Navbar from './components/Navbar'
 import ScrollTriggerTest from './pages/ProjectDetails';
@@ -23,97 +23,89 @@ function App() {
       // Toggle the 'dark-mode' class on the body element
       document.body.classList.toggle('dark-mode')
    }
-
-  let cursor;
-  let bigBall;
-  let smallBall;
+   useEffect(() => {
+      // Select elements
+      const cursor = document.querySelector(".cursor");
+      const bigBall = document.querySelector(".cursor__ball--big");
+      const smallBall = document.querySelector(".cursor__ball--small");
   
-  let body;
-  let widthMatches = false;
+      // Check if the media query matches
+      const mediaQuery = window.matchMedia("(min-width: 768px)");
   
-  window.addEventListener("load", () => {
-     cursor = document.querySelector(".cursor");
-     body = document.body;
+      function onMouseMove(e) {
+        if (mediaQuery.matches) {
+          cursor.style.display = "block";
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
   
-     bigBall = document.querySelector(".cursor__ball--big");
-     smallBall = document.querySelector(".cursor__ball--small");
+          gsap.to(bigBall, {
+            x: mouseX - bigBall.offsetWidth / 2,
+            y: mouseY - bigBall.offsetHeight / 2,
+            duration: 0.4, // Adjust duration for trailing effect
+            ease: "power1.out"
+          });
   
-     // Listeners
-     var x = window.matchMedia("(min-width: 768px)");
-     togglePageCursor(x);
-     x.addListener(togglePageCursor);
+          gsap.to(smallBall, {
+            x: mouseX - smallBall.offsetWidth / 2,
+            y: mouseY - smallBall.offsetHeight / 2,
+            duration: 0.15, // Slightly faster than the big ball for a layered effect
+      ease: "power1.out"
+          });
+        }
+      }
   
-     body.addEventListener("mousemove", onMouseMove); 
-     document.querySelectorAll(".hoverable").forEach((e) => {
-        e.addEventListener("mouseenter", onMouseHover);
-        e.addEventListener("mouseleave", onMouseHoverOut);
-     });
-  });
+      function onMouseHover() {
+        if (mediaQuery.matches) {
+          gsap.to(bigBall, { scale: 4, duration: 0.3 });
+        }
+      }
   
-  function togglePageCursor(e) {
-     if (e.matches) {
-        widthMatches = true;
-        body.style.cursor = "none";
-     } else {
-        widthMatches = false;
-        body.style.cursor = "";
-        cursor.style.display = "none";
-     }
-  }
+      function onMouseHoverOut() {
+        if (mediaQuery.matches) {
+          gsap.to(bigBall, { scale: 1, duration: 0.3 });
+        }
+      }
   
-  // Move the cursor
-  function onMouseMove(e) {
-     if (widthMatches) {
-        cursor.style.display = "block";
-        const mouseX = e.pageX - window.pageXOffset;
-    const mouseY = e.pageY - window.pageYOffset;
-     
+      function togglePageCursor() {
+        document.body.style.cursor = mediaQuery.matches ? "none" : "auto";
+      }
   
-     gsap.to(bigBall, {
-        x: mouseX - 20,
-        y: mouseY - 15,
-        duration: 0.8,
-        ease: "ease-in-out"
-     });
+      // Add event listeners
+      document.addEventListener("mousemove", onMouseMove);
+      document.querySelectorAll(".hoverable").forEach(el => {
+        el.addEventListener("mouseenter", onMouseHover);
+        el.addEventListener("mouseleave", onMouseHoverOut);
+      });
+      mediaQuery.addEventListener('change', togglePageCursor); // Use 'change' instead of 'addListener'
   
-     gsap.to(smallBall, {
-        x: mouseX - 5,
-        y: mouseY - 5,
-        duration: 0.3
-     });
-  }
-}
+      // Call on mount to apply the initial state
+      togglePageCursor();
   
-  // Hover an element
-  function onMouseHover() {
-     gsap.to(bigBall, {
-        scale: 4,
-        duration: 0.3
-     });
-  }
-  
-  function onMouseHoverOut() {
-     gsap.to(bigBall, {
-        scale: 1,
-        duration: 0.3
-     });
-  }
-  
+      // Cleanup event listeners on component unmount
+      return () => {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.querySelectorAll(".hoverable").forEach(el => {
+          el.removeEventListener("mouseenter", onMouseHover);
+          el.removeEventListener("mouseleave", onMouseHoverOut);
+        });
+        mediaQuery.removeEventListener('change', togglePageCursor);
+      };
+    }, []);
 
   return (
     <div className={isDarkMode ?'dark-mode' : ''}>
 
     {/* CUSTOM CURSOR */}
-            <div class="cursor">
-      <div class="cursor__ball cursor__ball--big">
+            <div className="cursor">
+      <div className="cursor__ball cursor__ball--big">
          <svg height="40" width="40">
-            <circle cx="20" cy="20" r="20" stroke-width="0" fill="#955F3D"></circle>
+            <circle cx="20" cy="20" r="20" strokeWidth="0" fill="#955F3D"></circle>
          </svg>
       </div>
 
-      <div class="cursor__ball cursor__ball--small">
+      <div className="cursor__ball cursor__ball--small">
          <svg height="10" width="10">
-            <circle cx="5" cy="5" r="5" stroke-width="0"></circle>
+            <circle cx="5" cy="5" r="5" strokeWidth="0"></circle>
          </svg>
       </div>
    </div>

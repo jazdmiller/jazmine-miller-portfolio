@@ -72,7 +72,7 @@ const subText = {
   return (
     <div className='home-page'>
 
-        <div className='home-container mx-auto'>
+        <div className='home-container mx-auto mt-md-4'>
             <div className='fluid-container home-wrapper ml-4 ml-md-0'>
 
             <div className='row frontend-row'>
