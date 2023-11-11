@@ -41,14 +41,14 @@ function App() {
           gsap.to(bigBall, {
             x: mouseX - bigBall.offsetWidth / 2,
             y: mouseY - bigBall.offsetHeight / 2,
-            duration: 0.4, // Adjust duration for trailing effect
+            duration: 0.4, 
             ease: "power1.out"
           });
   
           gsap.to(smallBall, {
             x: mouseX - smallBall.offsetWidth / 2,
             y: mouseY - smallBall.offsetHeight / 2,
-            duration: 0.15, // Slightly faster than the big ball for a layered effect
+            duration: 0.15, 
       ease: "power1.out"
           });
         }
@@ -76,12 +76,12 @@ function App() {
         el.addEventListener("mouseenter", onMouseHover);
         el.addEventListener("mouseleave", onMouseHoverOut);
       });
-      mediaQuery.addEventListener('change', togglePageCursor); // Use 'change' instead of 'addListener'
+      mediaQuery.addEventListener('change', togglePageCursor); 
   
       // Call on mount to apply the initial state
       togglePageCursor();
   
-      // Cleanup event listeners on component unmount
+  
       return () => {
         document.removeEventListener("mousemove", onMouseMove);
         document.querySelectorAll(".hoverable").forEach(el => {
