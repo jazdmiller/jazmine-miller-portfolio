@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { gsap } from 'gsap';
 import StarIcon from "../../public/assets/images/star.svg";
 import DarkStarIcon from "../../public/assets/images/star-darkmode.svg";
+import DownArrow from "../../public/assets/images/down-arrow-icon.png";
 import { collection, doc, getDoc } from 'firebase/firestore';
 import ScrollTrigger  from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
@@ -179,11 +180,15 @@ function ProjectDetails({ isDarkMode }) {
   return (
     <div className='container' id='smooth-wrapper'>
       <div id='smooth-content'>
-      <section className='outer-div mx-auto my-5'>
+      <section className='outer-div mx-auto mt-5 mt-md-2 mb-5'>
         <div ref={bgDivRef} className='inner-div my-md-3 bg-div'>
          <span>{projectDetails.title}<img ref={imgRef} className='mt-3 ' src={isDarkMode ? DarkStarIcon : StarIcon} /></span>
         </div>
       </section>
+
+      <div className='text-center arrow-margin'>
+        <img src={DownArrow}/>
+      </div>
 
       <section>      
         <div className='row intro-row'>

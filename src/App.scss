@@ -443,6 +443,11 @@ body {
 
 /* ******* PROJECT PAGE ********** */
 
+.arrow-margin{
+  margin-top: -40%;
+  margin-bottom: 20%;
+}
+
 .title-container {
   height: 80vh;
   width: 80vw;
@@ -929,6 +934,11 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .arrow-margin{
+    margin-top: -10%;
+    margin-bottom: 0;
+  }
+  
   .project-title{
     width: 75%;
   }
