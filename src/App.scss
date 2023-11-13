@@ -1,4 +1,9 @@
-
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
 
 :root {
   --primary-color: #f5f2ed;
@@ -283,9 +288,7 @@ body {
   width: 30px;
 }
 
-.cursor {
-  display: none;
-}
+
 
 
 #circle {
@@ -920,7 +923,11 @@ body {
   }
   
 }
-
+@media (max-width: 767px) {
+  .cursor {
+    display: none !important; /* Overrides any inline styles */
+  }
+}
 @media (min-width: 768px) {
   .project-title{
     width: 75%;

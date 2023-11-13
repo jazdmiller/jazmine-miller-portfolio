@@ -33,7 +33,7 @@ function App() {
       const mediaQuery = window.matchMedia("(min-width: 768px)");
   
       function onMouseMove(e) {
-        if (mediaQuery.matches) {
+        if (window.innerWidth >= 768) {
           cursor.style.display = "block";
           const mouseX = e.clientX;
           const mouseY = e.clientY;
@@ -55,19 +55,25 @@ function App() {
       }
   
       function onMouseHover() {
-        if (mediaQuery.matches) {
+        if (window.innerWidth >= 768) {
           gsap.to(bigBall, { scale: 4, duration: 0.3 });
         }
       }
   
       function onMouseHoverOut() {
-        if (mediaQuery.matches) {
+        if (window.innerWidth >= 768) {
           gsap.to(bigBall, { scale: 1, duration: 0.3 });
         }
       }
   
       function togglePageCursor() {
-        document.body.style.cursor = mediaQuery.matches ? "none" : "auto";
+         if (mediaQuery.matches) {
+            cursor.style.display = "block";
+            document.body.style.cursor = "none";
+          } else {
+            cursor.style.display = "none";
+            document.body.style.cursor = "auto";
+          }
       }
   
       // Add event listeners
